@@ -1,0 +1,50 @@
+import { cn } from "@/lib/utils";
+
+type SectionHeadingProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+  invert?: boolean;
+};
+
+export function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  align = "left",
+  invert = false,
+}: SectionHeadingProps) {
+  return (
+    <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+      <div
+        className={cn(
+          "mb-5 flex items-center gap-3 font-mono text-[9px] font-bold uppercase tracking-[0.2em]",
+          align === "center" && "justify-center",
+          invert ? "text-[#b8ff3d]" : "text-[#5f8a19]",
+        )}
+      >
+        <span className={cn("size-1.5 rounded-full", invert ? "bg-[#b8ff3d]" : "bg-[#73a824]")} />
+        {eyebrow}
+      </div>
+      <h2
+        className={cn(
+          "text-balance text-4xl font-semibold leading-[.98] tracking-[-0.055em] sm:text-5xl lg:text-6xl",
+          invert ? "text-white" : "text-neutral-950",
+        )}
+      >
+        {title}
+      </h2>
+      {description ? (
+        <p
+          className={cn(
+            "mt-5 text-pretty text-base leading-7 sm:text-lg",
+            invert ? "text-white/55" : "text-neutral-600",
+          )}
+        >
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}
