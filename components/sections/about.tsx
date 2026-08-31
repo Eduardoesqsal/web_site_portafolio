@@ -47,7 +47,7 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
                       Entiendo el contexto antes de elegir una solución.
                     </h3>
                     <p className="mt-5 max-w-md text-sm leading-7 text-white/45">
-                      He llevado proyectos de idea a producción combinando HTML, CSS, JavaScript, React, TypeScript, Next.js, Express, PostgreSQL, Python, FastAPI, Flask y Supabase, con entregas automatizadas usando Docker, Git, GitHub Actions y CI/CD. También desarrollo y entreno modelos de inteligencia artificial (computer vision, agentes y LLMs) para aplicarlos a necesidades concretas.
+                      He llevado proyectos de idea a producción combinando HTML, CSS, JavaScript, React, TypeScript, Next.js, Express, PostgreSQL, Python, FastAPI, Flask y Supabase, con servidores Linux, contenedores en Docker y pipelines de CI/CD (GitHub Actions) para desplegar en AWS con confianza. También desarrollo y entreno modelos de inteligencia artificial (computer vision, agentes y LLMs) para aplicarlos a necesidades concretas.
                     </p>
                   </div>
 

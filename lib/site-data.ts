@@ -110,13 +110,14 @@ export const techCategories: TechCategory[] = [
   },
   {
     name: "DevOps & Cloud",
-    description: "Entregas reproducibles y operación confiable.",
+    description: "Infraestructura en Linux, contenedores y entrega continua lista para producción.",
     technologies: [
+      { name: "Linux", short: "Ln" },
       { name: "Docker", short: "Dk" },
+      { name: "CI/CD", short: "CI" },
+      { name: "GitHub Actions", short: "GA" },
+      { name: "AWS", short: "Aws" },
       { name: "Git", short: "Git" },
-      { name: "GitHub", short: "Gh" },
-      { name: "Vercel", short: "▲" },
-      { name: "Cloud", short: "Cl" },
     ],
   },
 ];
@@ -252,7 +253,7 @@ export const services: Service[] = [
   },
   {
     title: "Cloud & DevOps",
-    description: "Contenedores, despliegues y flujos automatizados para entregar con confianza.",
+    description: "Servidores Linux, contenedores Docker, pipelines de CI/CD y despliegues en AWS para entregar con confianza.",
     icon: CloudCog,
   },
 ];
@@ -309,8 +310,8 @@ export const developmentTypes: DevelopmentType[] = [
   {
     title: "De páginas estáticas a aplicaciones web",
     description:
-      "Subo proyectos desde una página estática hasta una aplicación completa con backend, base de datos y despliegue automatizado.",
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Docker", "Vercel", "GitHub Actions", "CI/CD"],
+      "Despliego proyectos completos, desde una página estática hasta una aplicación con backend, base de datos y automatizaciones, con servidores Linux, contenedores en Docker, pipelines de CI/CD y despliegues en AWS.",
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Linux", "Docker", "CI/CD", "AWS"],
   },
 ];
 
