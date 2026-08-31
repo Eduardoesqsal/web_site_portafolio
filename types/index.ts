@@ -44,3 +44,9 @@ export type Service = {
   description: string;
   icon: LucideIcon;
 };
+
+export type DevelopmentType = {
+  title: string;
+  description: string;
+  technologies: string[];
+};

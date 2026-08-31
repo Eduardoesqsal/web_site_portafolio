@@ -1,7 +1,7 @@
-import { ArrowUpRight, Check, Code2, CornerDownRight, Terminal } from "lucide-react";
+import { ArrowUpRight, Check, Code2, CornerDownRight, Layers3, Terminal } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { specialtyCards } from "@/lib/site-data";
+import { developmentTypes, specialtyCards } from "@/lib/site-data";
 
 const principles = ["Entender antes de construir", "Diseñar para las personas", "Medir el impacto real"];
 
@@ -106,6 +106,47 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
               </div>
             </article>
           </Reveal>
+        </div>
+
+        <div className="mt-20">
+          <Reveal>
+            <div className="flex items-end justify-between border-t border-black/10 pt-6">
+              <div>
+                <span className="font-mono text-[9px] uppercase tracking-[.18em] text-black/35">Cómo desarrollo software</span>
+                <h3 className="mt-3 max-w-xl text-3xl font-semibold tracking-[-.04em] text-neutral-900 sm:text-4xl">
+                  Tipos de desarrollo que domino
+                </h3>
+              </div>
+              <Layers3 className="hidden size-7 text-black/30 sm:block" />
+            </div>
+          </Reveal>
+          <div className="mt-8 grid gap-3 md:grid-cols-2">
+            {developmentTypes.map((type, index) => (
+              <Reveal key={type.title} delay={(index % 2) * 0.06}>
+                <article className="group flex h-full flex-col rounded-[1.75rem] border border-black/10 bg-[#e9e9e1] p-6 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_24px_60px_rgba(0,0,0,.08)] sm:p-7">
+                  <div className="flex items-start justify-between">
+                    <span className="grid size-10 place-items-center rounded-full bg-black font-mono text-[10px] text-[#b8ff3d]">
+                      0{index + 1}
+                    </span>
+                    <CornerDownRight className="size-4 text-black/20 transition group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-black" />
+                  </div>
+                  <h3 className="mt-6 text-lg font-semibold tracking-tight text-neutral-900">{type.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-black/45">{type.description}</p>
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                    <span className="font-mono text-[9px] uppercase tracking-[.14em] text-black/35">Tecnologías</span>
+                    {type.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-black/10 bg-white px-3 py-1 text-[11px] font-medium text-neutral-700 transition group-hover:border-black/25"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
 
         <div className="mt-3 grid gap-3 md:grid-cols-3">

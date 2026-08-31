@@ -17,6 +17,7 @@ import {
   Workflow,
 } from "lucide-react";
 import type {
+  DevelopmentType,
   Experience,
   NavItem,
   Project,
@@ -273,6 +274,45 @@ export const specialtyCards = [
     icon: Sparkles,
   },
 ] as const;
+
+export const developmentTypes: DevelopmentType[] = [
+  {
+    title: "Desarrollo de software frontend",
+    description:
+      "Construyo interfaces rápidas, accesibles y responsivas que convierten una idea en un producto que la gente usa con gusto.",
+    technologies: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "WordPress"],
+  },
+  {
+    title: "Desarrollo de software backend",
+    description:
+      "Diseño APIs y servicios seguros que sostienen la lógica de negocio detrás de cada producto, desde la base de datos hasta la respuesta.",
+    technologies: ["Python", "FastAPI", "Flask", "Node.js", "Express.js", "REST APIs", "PostgreSQL", "Supabase"],
+  },
+  {
+    title: "Desarrollo y entrenamiento de inteligencia artificial",
+    description:
+      "Desarrollo y entreno modelos de IA sobre datos reales para automatizar decisiones y procesos repetitivos.",
+    technologies: ["Python", "LLMs", "AI Agents", "Fine-tuning", "Entrenamiento a medida"],
+  },
+  {
+    title: "Visión por computadora",
+    description:
+      "Entreno algoritmos que interpretan imágenes, detectan objetos y convierten lo visual en información útil y accionable.",
+    technologies: ["Python", "YOLO", "Segmentación", "OpenCV", "Entrenamiento con datos propios"],
+  },
+  {
+    title: "Desarrollo de software geoespacial",
+    description:
+      "Integro mapas, análisis espacial y ortomosaicos dentro del producto para dar contexto territorial a las decisiones.",
+    technologies: ["PostGIS", "Leaflet", "OpenLayers", "Ortomosaicos", "Metashape API", "IDE", "QGIS"],
+  },
+  {
+    title: "De páginas estáticas a aplicaciones web",
+    description:
+      "Subo proyectos desde una página estática hasta una aplicación completa con backend, base de datos y despliegue automatizado.",
+    technologies: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Docker", "Vercel", "GitHub Actions", "CI/CD"],
+  },
+];
 
 export const capabilityIcons = [
   DraftingCompass,
