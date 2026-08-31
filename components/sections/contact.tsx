@@ -1,4 +1,4 @@
-import { ArrowUpRight, Clock3, Github, Linkedin, Mail, MapPin, MessageSquareText } from "lucide-react";
+import { ArrowUpRight, Clock3, Github, Linkedin, Mail, MapPin, MessageCircle, MessageSquareText } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/lib/site-data";
@@ -29,6 +29,11 @@ export function Contact() {
                 <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-3 rounded-2xl bg-black p-3 text-sm text-white/70 transition hover:-translate-y-0.5 hover:text-white">
                   <span className="grid size-10 place-items-center rounded-xl bg-white/10"><Mail className="size-4 text-[#b8ff3d]" /></span>
                   <span><span className="block font-mono text-[7px] uppercase tracking-widest text-white/30">Correo</span>{siteConfig.email}</span>
+                  <ArrowUpRight className="ml-auto size-3.5 text-white/25 transition group-hover:text-[#b8ff3d]" />
+                </a>
+                <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="group flex items-center gap-3 rounded-2xl bg-black p-3 text-sm text-white/70 transition hover:-translate-y-0.5 hover:text-white">
+                  <span className="grid size-10 place-items-center rounded-xl bg-white/10"><MessageCircle className="size-4 text-[#b8ff3d]" /></span>
+                  <span><span className="block font-mono text-[7px] uppercase tracking-widest text-white/30">WhatsApp</span>{siteConfig.whatsappLabel}</span>
                   <ArrowUpRight className="ml-auto size-3.5 text-white/25 transition group-hover:text-[#b8ff3d]" />
                 </a>
                 <div className="flex items-center gap-3 rounded-2xl border border-black/15 bg-white/30 p-3 text-sm text-black/60">

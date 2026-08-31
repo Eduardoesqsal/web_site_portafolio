@@ -596,3 +596,10 @@ pnpm run build
 Dame una lista breve de los archivos modificados.
 
 **No me des una solución teórica. Investiga el código real del proyecto, corrígelo y verifica el build antes de decir que está solucionado.**
+
+#perfiles
+https://www.linkedin.com/in/eduardo-salazar-89b805225?utm_source=share_via&utm_content=profile&utm_medium=member_android
+
+watsapp 4272989094
+
+y github es https://github.com/Eduardoesqsal

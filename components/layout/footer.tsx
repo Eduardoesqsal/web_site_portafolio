@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { navigation, siteConfig } from "@/lib/site-data";
 
 export function Footer() {
@@ -52,6 +52,15 @@ Desarrollador de software, inteligencia artificial y automatización para resolv
             </a>
             <a href={`mailto:${siteConfig.email}`} className="social-icon" aria-label="Correo">
               <Mail />
+            </a>
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle />
             </a>
             <a href="#inicio" className="social-icon ml-2" aria-label="Volver arriba">
               <ArrowUp />

@@ -29,14 +29,17 @@ export const siteConfig = {
   name: "Eduardo Esquivel Salaszar",
   shortName: "EES",
   role: "Desarrollador de software",
-  profilePhoto: "/eduardo-esquivel.jpg",
+  profilePhoto: "/edwin.jpeg",
   description:
     "Desarrollo productos digitales que convierten procesos, datos e ideas en software claro, rápido y útil.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000",
   email: "hola@tudominio.com",
   location: "México · Disponible en remoto",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "https://github.com/Eduardoesqsal",
+  linkedin:
+    "https://www.linkedin.com/in/eduardo-salazar-89b805225?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  whatsapp: "https://wa.me/524272989094",
+  whatsappLabel: "+52 427 298 9094",
 } as const;
 
 export const navigation: NavItem[] = [
