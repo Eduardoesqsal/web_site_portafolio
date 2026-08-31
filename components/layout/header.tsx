@@ -33,14 +33,14 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
       <div
         className={cn(
-          "mx-auto flex h-16 max-w-[76rem] items-center justify-between rounded-full border px-2.5 pl-3 transition-all duration-500 sm:pl-4",
+          "mx-auto flex h-[4.25rem] max-w-[76rem] items-center justify-between rounded-[1.35rem] border px-2.5 pl-3 transition-all duration-500 sm:pl-4",
           scrolled
-            ? "border-black/10 bg-[#f7f7f1]/88 text-black shadow-[0_12px_45px_rgba(0,0,0,.12)] backdrop-blur-xl"
-            : "border-white/10 bg-black/20 text-white backdrop-blur-md",
+            ? "border-black/10 bg-[#f7f7f1]/90 text-black shadow-[0_16px_55px_rgba(0,0,0,.14)] backdrop-blur-2xl"
+            : "border-white/15 bg-black/30 text-white shadow-[0_12px_50px_rgba(0,0,0,.18)] backdrop-blur-xl",
         )}
       >
         <a href="#inicio" className="group flex items-center gap-3 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-[#b8ff3d]" aria-label={`${siteConfig.name}, volver al inicio`}>
-          <span className="grid size-9 place-items-center rounded-full bg-[#b8ff3d] text-[10px] font-black tracking-tight text-black transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
+          <span className="grid size-10 place-items-center rounded-full bg-gradient-to-br from-[#d4ff82] via-[#b8ff3d] to-[#82c719] text-[10px] font-black tracking-tight text-black shadow-[0_0_24px_rgba(184,255,61,.22)] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
             {siteConfig.shortName}
           </span>
           <span className="hidden sm:block">
@@ -54,7 +54,7 @@ export function Header() {
             const isActive = activeSection === item.href.slice(1);
             return (
               <a key={item.href} href={item.href} className={cn(
-                "relative rounded-full px-3.5 py-2 text-[11px] font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#b8ff3d]",
+                "relative rounded-xl px-3.5 py-2.5 text-[11px] font-medium transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#b8ff3d]",
                 isActive
                   ? scrolled ? "bg-black text-white" : "bg-white/10 text-white"
                   : scrolled ? "text-black/45 hover:text-black" : "text-white/45 hover:text-white",

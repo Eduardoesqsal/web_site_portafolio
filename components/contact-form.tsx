@@ -70,7 +70,7 @@ export function ContactForm() {
             Selecciona una opción
           </option>
           <option>Aplicación web</option>
-          <option>Sistema GIS</option>
+          <option>Datos espaciales</option>
           <option>IA / Computer Vision</option>
           <option>Agente y automatización</option>
           <option>API / Backend</option>

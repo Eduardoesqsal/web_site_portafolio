@@ -3,16 +3,6 @@ import { Reveal } from "@/components/motion/reveal";
 import { ProjectVisual } from "@/components/project-visual";
 import { SectionHeading } from "@/components/section-heading";
 import { projects } from "@/lib/site-data";
-import { cn } from "@/lib/utils";
-
-const layouts = [
-  "lg:col-span-7",
-  "lg:col-span-5",
-  "lg:col-span-5",
-  "lg:col-span-7",
-  "lg:col-span-6",
-  "lg:col-span-6",
-];
 
 export function Projects() {
   return (
@@ -22,8 +12,8 @@ export function Projects() {
           <div className="flex flex-col justify-between gap-7 border-b border-black/15 pb-10 md:flex-row md:items-end">
             <SectionHeading
               eyebrow="03 / Trabajo seleccionado"
-              title="Casos, no tarjetas de relleno."
-              description="Sistemas diseñados alrededor de una necesidad concreta, desde infraestructura geoespacial hasta agentes que ejecutan trabajo real."
+              title="Proyectos desarrollados para necesidades concretas."
+              description="Sistemas diseñados alrededor de una necesidad concreta: producto, automatización, interfaces y agentes que ejecutan trabajo real."
             />
             <a href="#contacto" className="focus-ring group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-xs font-semibold text-white transition hover:bg-violet-600 md:self-auto">
               Tengo un reto <ArrowUpRight className="size-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -31,11 +21,11 @@ export function Projects() {
           </div>
         </Reveal>
 
-        <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-12">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={project.name} delay={(index % 2) * .06} className={cn("md:col-span-1", layouts[index])}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-[1.8rem] border border-black/10 bg-white transition duration-500 hover:-translate-y-1 hover:border-black/20 hover:shadow-[0_30px_80px_rgba(0,0,0,.1)]">
-                <div className="relative overflow-hidden border-b border-black/10">
+            <Reveal key={project.name} delay={(index % 2) * .06}>
+              <article className="project-card group flex h-full flex-col overflow-hidden rounded-[2rem] border border-black/10 bg-white transition duration-500 hover:-translate-y-2 hover:border-black/20 hover:shadow-[0_35px_90px_rgba(0,0,0,.15)]">
+                <div className="shine-hover relative overflow-hidden border-b border-black/10">
                   <div className="transition duration-700 group-hover:scale-[1.025]">
                     <ProjectVisual type={project.visual} />
                   </div>
@@ -44,7 +34,7 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="flex flex-1 flex-col p-5 sm:p-7">
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <div className="flex items-start justify-between gap-5">
                     <div>
                       <p className="font-mono text-[8px] uppercase tracking-[.16em] text-violet-600">{project.category}</p>

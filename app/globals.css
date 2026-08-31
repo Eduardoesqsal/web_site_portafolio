@@ -20,7 +20,7 @@
 :root {
   --font-main: "Arial Nova", "Helvetica Neue", Arial, ui-sans-serif, sans-serif;
   --font-code: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
-  --background: #f4f4ee;
+  --background: #f5f6f0;
   --foreground: #0a0b0a;
   --accent: #b8ff3d;
 }
@@ -44,6 +44,11 @@ body {
   font-family: var(--font-main);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+.hero-surface {
+  background:
+    linear-gradient(135deg, #3a403d 0%, #252b28 52%, #18231c 100%);
 }
 
 ::selection {
@@ -70,6 +75,68 @@ a {
   padding-block: clamp(5.5rem, 10vw, 9rem);
 }
 
+section {
+  scroll-margin-top: 7rem;
+}
+
+.section-kicker {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-kicker::before {
+  content: "";
+  position: absolute;
+  inset: -1.5rem -2rem;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(184, 255, 61, .18), transparent 68%);
+  filter: blur(14px);
+}
+
+.project-card {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 1px 1px rgba(10, 11, 10, .03), 0 18px 45px rgba(10, 11, 10, .045);
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(184, 255, 61, .55), transparent 30%, transparent 70%, rgba(124, 58, 237, .28));
+  opacity: 0;
+  transition: opacity .5s ease;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.shine-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.16) 45%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform .8s ease;
+}
+
+.shine-hover:hover::after {
+  transform: translateX(120%);
+}
+
 .text-gradient {
   color: transparent;
   background: linear-gradient(105deg, #0a0b0a 15%, #59664b 55%, #0a0b0a 92%);
@@ -86,8 +153,15 @@ a {
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .055) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .055) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,.7) 72%, transparent 100%);
+}
+
+.hero-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 72% 42%, rgba(184,255,61,.1), transparent 24%), radial-gradient(circle at 32% 18%, rgba(124,58,237,.12), transparent 28%);
 }
 
 .blueprint-grid {
@@ -109,8 +183,8 @@ a {
 
 .glass-card {
   border: 1px solid rgba(255, 255, 255, .13);
-  background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .045));
-  box-shadow: inset 0 1px rgba(255, 255, 255, .12), 0 30px 80px rgba(0, 0, 0, .22);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .13), rgba(255, 255, 255, .035));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .15), 0 30px 80px rgba(0, 0, 0, .22);
   backdrop-filter: blur(16px);
 }
 

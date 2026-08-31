@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { siteConfig, stats } from "@/lib/site-data";
 
 const orbitItems = [
-  { label: "Geo", icon: Globe2, className: "left-[2%] top-[46%]", delay: 0 },
+  { label: "Product", icon: Globe2, className: "left-[2%] top-[46%]", delay: 0 },
   { label: "AI", icon: BrainCircuit, className: "right-[7%] top-[11%]", delay: 0.8 },
   { label: "Code", icon: Code2, className: "bottom-[11%] right-[1%]", delay: 1.4 },
 ] as const;
@@ -49,11 +49,11 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="noise relative isolate min-h-screen overflow-hidden bg-[#0a0b0a] pt-28 text-white sm:pt-32"
+      className="hero-surface noise relative isolate min-h-screen overflow-hidden pt-28 text-white sm:pt-32"
     >
       <div className="hero-grid absolute inset-0 -z-20 opacity-70" />
       <div className="absolute -left-40 top-10 -z-10 size-[34rem] rounded-full bg-[#b8ff3d]/8 blur-[120px]" />
-      <div className="absolute -right-40 top-28 -z-10 size-[38rem] rounded-full bg-violet-600/15 blur-[130px]" />
+      <div className="absolute -right-40 top-28 -z-10 size-[38rem] rounded-full bg-[#b8ff3d]/10 blur-[130px]" />
       <div className="absolute left-[58%] top-[14%] -z-10 h-[28rem] w-px rotate-[28deg] bg-gradient-to-b from-transparent via-white/15 to-transparent" />
 
       <div className="container-site grid min-h-[calc(100vh-8rem)] items-center gap-14 pb-12 pt-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-8 lg:pb-16 lg:pt-10">
@@ -74,15 +74,43 @@ export function Hero() {
           </div>
 
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#b8ff3d]">
-            {"// software engineer · geoai · product"}
+            {"// full stack · ai · product · geospatial"}
           </p>
-          <h1 className="max-w-[48rem] text-balance text-[clamp(3rem,8vw,7.4rem)] font-semibold leading-[.86] tracking-[-0.07em]">
-            Construyo lo que otros <span className="text-outline">imaginan.</span>
+          <h1 className="max-w-[48rem] text-balance text-[clamp(3.4rem,8.5vw,7.6rem)] font-semibold leading-[.84] tracking-[-0.08em]">
+            Desarrollo software para convertir ideas en <span className="relative inline-block text-[#b8ff3d]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#b8ff3d]/40" /></span>.
           </h1>
           <p className="mt-8 max-w-xl text-pretty text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
-            Desarrollo productos full stack donde el código, los datos geoespaciales y la IA se
-            convierten en herramientas <span className="text-white">claras, rápidas y útiles.</span>
+            Aporto desarrollo full stack, automatización, visión por computadora y soluciones
+            geoespaciales cuando el proyecto lo necesita. Trabajo para que el producto quede
+            <span className="text-white"> claro, estable y fácil de usar.</span>
           </p>
+
+          <div className="mt-8">
+            <p className="mb-3 font-mono text-[9px] uppercase tracking-[.2em] text-white/30">
+              Stack principal
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Python",
+                "FastAPI",
+                "PostgreSQL",
+                "PostGIS",
+                "Computer Vision",
+                "LLMs",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-[9px] text-white/70"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="group">
@@ -106,7 +134,7 @@ export function Hero() {
             </span>
             <span className="hidden h-3 w-px bg-white/15 sm:block" />
             <span className="inline-flex items-center gap-1.5">
-              <Check className="size-3.5 text-[#b8ff3d]" /> Español · English
+              <Check className="size-3.5 text-[#b8ff3d]" /> Español · Inglés básico-intermedio
             </span>
           </div>
         </motion.div>
@@ -161,7 +189,7 @@ export function Hero() {
             </motion.div>
           ))}
 
-          <div className="absolute bottom-[1%] left-[15%] z-20 rounded-full border border-white/15 bg-white px-4 py-2.5 text-[10px] font-semibold text-black shadow-xl">
+          <div className="absolute bottom-[1%] left-[15%] z-20 rounded-full border border-white/15 bg-white px-4 py-2.5 text-[10px] font-semibold text-black shadow-[0_18px_45px_rgba(0,0,0,.35)]">
             <span className="mr-2 inline-block size-1.5 rounded-full bg-emerald-500" />
             Systems online
           </div>
@@ -288,22 +316,32 @@ function ProfileModal({
             </h2>
             <p className="mt-3 text-sm font-medium text-[#b8ff3d]">{siteConfig.role}</p>
             <p className="mt-6 text-sm leading-7 text-white/50">
-              Combino ingeniería, pensamiento de producto y curiosidad para convertir problemas complejos
-              en experiencias que se sienten simples. Mi terreno favorito vive entre la web, GeoAI y los agentes inteligentes.
+              Combino ingeniería y pensamiento de producto para convertir necesidades concretas
+              en experiencias claras y fáciles de usar. Trabajo principalmente en web, automatización,
+              IA y soluciones geoespaciales cuando el proyecto lo requiere.
             </p>
             <div className="mt-7 grid grid-cols-2 gap-2">
-              {["Full Stack", "GeoAI", "Computer Vision", "AI Agents"].map((item) => (
-                <div key={item} className="rounded-xl border border-white/10 bg-white/[.035] px-3 py-3 text-[10px] font-medium text-white/60">
+              {["Full Stack", "IA aplicada", "Computer Vision", "Geoespacial"].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-white/10 bg-white/[.035] px-3 py-3 text-[10px] font-medium text-white/60"
+                >
                   <Sparkles className="mb-2 size-3.5 text-[#b8ff3d]" /> {item}
                 </div>
               ))}
             </div>
             <div className="mt-auto flex flex-wrap items-center gap-3 pt-8">
               <Button asChild size="sm">
-                <a href="#contacto" onClick={onClose}>Hablemos <ArrowRight /></a>
+                <a href="#contacto" onClick={onClose}>
+                  Hablemos <ArrowRight />
+                </a>
               </Button>
-              <a href={siteConfig.github} target="_blank" rel="noreferrer" className="modal-social" aria-label="GitHub"><Github /></a>
-              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer" className="modal-social" aria-label="LinkedIn"><Linkedin /></a>
+              <a href={siteConfig.github} target="_blank" rel="noreferrer" className="modal-social" aria-label="GitHub">
+                <Github />
+              </a>
+              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer" className="modal-social" aria-label="LinkedIn">
+                <Linkedin />
+              </a>
             </div>
           </div>
         </div>

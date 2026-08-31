@@ -30,7 +30,7 @@ export const siteConfig = {
   role: "Desarrollador de software",
   profilePhoto: "/eduardo-esquivel.jpg",
   description:
-    "Desarrollo productos digitales que convierten datos complejos, imágenes y procesos manuales en software claro, rápido y útil.",
+    "Desarrollo productos digitales que convierten procesos, datos e ideas en software claro, rápido y útil.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   email: "hola@tudominio.com",
   location: "México · Disponible en remoto",
@@ -48,8 +48,8 @@ export const navigation: NavItem[] = [
 
 export const stats = [
   { value: "Full Stack", label: "Producto de punta a punta" },
-  { value: "GeoAI", label: "Datos con contexto espacial" },
-  { value: "AI Agents", label: "Automatización inteligente" },
+  { value: "IA aplicada", label: "Automatización con criterio" },
+  { value: "Geoespacial", label: "Análisis espacial cuando aporta valor" },
 ] as const;
 
 export const techCategories: TechCategory[] = [
@@ -78,7 +78,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     name: "Bases de datos",
-    description: "Datos transaccionales y geoespaciales.",
+    description: "Datos transaccionales y espaciales cuando el proyecto lo necesita.",
     technologies: [
       { name: "PostgreSQL", short: "Pg" },
       { name: "PostGIS", short: "Gis" },
@@ -86,8 +86,8 @@ export const techCategories: TechCategory[] = [
     ],
   },
   {
-    name: "GIS",
-    description: "Visualización y análisis espacial en la web.",
+    name: "Geoespacial",
+    description: "Visualización y análisis espacial integrados al producto.",
     technologies: [
       { name: "Leaflet", short: "Lf" },
       { name: "OpenLayers", short: "OL" },
@@ -122,77 +122,64 @@ export const techCategories: TechCategory[] = [
 
 export const projects: Project[] = [
   {
-    name: "GeoSpatial Data Hub",
-    category: "Infraestructura geoespacial",
+    name: "Urbano Shoes",
+    category: "E-commerce de calzado",
     description:
-      "Plataforma para publicar, explorar y analizar capas geográficas desde una interfaz web de alto rendimiento.",
+      "Tienda en línea para calzado urbano con catálogo, navegación rápida y experiencia de compra clara.",
     problem:
-      "Centraliza información dispersa y permite tomar decisiones territoriales con una única fuente de verdad.",
-    technologies: ["Next.js", "PostGIS", "FastAPI", "OpenLayers", "Docker"],
+      "Convierte un catálogo de productos en una experiencia de venta simple y fácil de administrar.",
+    technologies: ["Next.js", "Stripe", "Supabase", "Tailwind", "TypeScript"],
+    visual: "commerce",
+    demoUrl: "https://white-kicks.netlify.app",
+    githubUrl: siteConfig.github,
+    featured: true,
+  },
+  {
+    name: "BioID System",
+    category: "Identificación biométrica",
+    description:
+      "Sistema de identificación de datos biométricos con validación, trazabilidad y panel de control.",
+    problem:
+      "Reduce fricción en procesos de identificación y conserva control sobre los eventos registrados.",
+    technologies: ["Python", "YOLO", "FastAPI", "React.js", "PostgreSQL"],
+    visual: "face",
+    demoUrl: "https://face-biometric-a-i-1.onrender.com/",
+    githubUrl: siteConfig.github,
+    featured: true,
+  },
+  {
+    name: "GeoField App",
+    category: "Geoportal / ortomosaicos",
+    description:
+      "Geoportal para análisis de ortomosaicos con backend propio y entrenamiento de algoritmos de visión por computadora.",
+    problem:
+      "Transforma imágenes aéreas en información útil para análisis técnico y toma de decisiones.",
+    technologies: ["Python", "PostGIS", "FastAPI", "OpenLayers", "Computer Vision"],
     visual: "map",
     demoUrl: "#contacto",
     githubUrl: siteConfig.github,
-    featured: true,
   },
   {
-    name: "Vision Access",
-    category: "Computer Vision",
-    description:
-      "Sistema de reconocimiento facial con registro de eventos, validación en tiempo real y panel de auditoría.",
-    problem:
-      "Automatiza controles de identidad preservando trazabilidad y reduciendo tiempos de acceso.",
-    technologies: ["Python", "YOLO", "FastAPI", "React.js", "PostgreSQL"],
-    visual: "face",
-    demoUrl: "#contacto",
-    githubUrl: siteConfig.github,
-    featured: true,
-  },
-  {
-    name: "CAD Copilot",
+    name: "AutoDraft AI",
     category: "Agente de IA",
     description:
-      "Agente capaz de interpretar instrucciones en lenguaje natural y ejecutar flujos de dibujo técnico en CAD.",
+      "Agente de inteligencia artificial para dibujo en AutoCAD que interpreta instrucciones y ejecuta tareas repetitivas.",
     problem:
-      "Reduce tareas repetitivas de dibujo, estandariza entregables y acelera iteraciones de diseño.",
+      "Acelera trabajo técnico de dibujo y estandariza entregables dentro de un flujo guiado por IA.",
     technologies: ["Python", "LLMs", "AutoCAD API", "FastAPI", "Agents"],
     visual: "cad",
     demoUrl: "#contacto",
     githubUrl: siteConfig.github,
-    featured: true,
   },
   {
-    name: "Nómada Commerce",
-    category: "E-commerce",
+    name: "PhotoFlow Portal",
+    category: "Procesamiento fotogramétrico",
     description:
-      "Experiencia de compra headless con catálogo dinámico, pagos, inventario y panel de operación.",
+      "Portal web para procesamiento fotogramétrico con seguimiento de tareas, estados y resultados.",
     problem:
-      "Convierte una operación manual en un canal de venta medible, rápido y escalable.",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Stripe", "Tailwind"],
-    visual: "commerce",
-    demoUrl: "#contacto",
-    githubUrl: siteConfig.github,
-  },
-  {
-    name: "Crop Intelligence",
-    category: "IA para agricultura",
-    description:
-      "Análisis de ortomosaicos para detectar cultivos, segmentar zonas y estimar indicadores agronómicos.",
-    problem:
-      "Transforma vuelos de dron en información accionable para agricultura de precisión.",
-    technologies: ["YOLO", "Segmentation", "Metashape", "PostGIS", "Python"],
-    visual: "agro",
-    demoUrl: "#contacto",
-    githubUrl: siteConfig.github,
-  },
-  {
-    name: "Spatial ETL Monitor",
-    category: "Data Engineering",
-    description:
-      "Pipeline automatizado para validar, transformar y sincronizar grandes volúmenes de datos espaciales.",
-    problem:
-      "Evita errores silenciosos y convierte procesos GIS de horas en flujos observables y repetibles.",
-    technologies: ["Python", "PostgreSQL", "PostGIS", "Docker", "GitHub Actions"],
-    visual: "data",
+      "Organiza un flujo técnico que normalmente se dispersa entre pasos manuales y archivos separados.",
+    technologies: ["Next.js", "FastAPI", "Docker", "PostgreSQL", "React.js"],
+    visual: "photogrammetry",
     demoUrl: "#contacto",
     githubUrl: siteConfig.github,
   },
@@ -209,11 +196,11 @@ export const experiences: Experience[] = [
   },
   {
     period: "2022 — 2024",
-    role: "Geospatial Software Developer",
-    company: "Proyectos GIS & agricultura",
+    role: "Software Developer",
+    company: "Proyectos reales de producto",
     description:
-      "Construcción de visores, procesos geoespaciales y automatizaciones para convertir imágenes aéreas en decisiones.",
-    highlights: ["PostGIS", "Ortomosaicos", "Web mapping"],
+      "Construcción de productos web, procesos de datos y automatizaciones; también trabajé con soluciones geoespaciales cuando el proyecto lo requería.",
+    highlights: ["PostGIS", "Automatización", "Web mapping"],
   },
   {
     period: "2020 — 2022",
@@ -237,8 +224,8 @@ export const services: Service[] = [
     icon: ServerCog,
   },
   {
-    title: "Sistemas GIS",
-    description: "Visores, análisis espacial, PostGIS e infraestructuras de datos geográficos.",
+    title: "Datos espaciales",
+    description: "Mapas, PostGIS y análisis espacial cuando aportan valor al producto.",
     icon: Map,
   },
   {
@@ -275,8 +262,8 @@ export const specialtyCards = [
     icon: Blocks,
   },
   {
-    title: "Geo + visión",
-    description: "Mapas, ortomosaicos e imágenes convertidos en herramientas operativas.",
+    title: "Datos + visión",
+    description: "Imágenes, analítica y automatización convertidas en herramientas operativas.",
     icon: Globe2,
   },
   {

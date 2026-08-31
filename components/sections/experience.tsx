@@ -22,7 +22,7 @@ export function Experience() {
                   <ArrowUpRight className="size-4 text-black/30" />
                 </div>
                 <p className="mt-10 text-xl font-semibold leading-tight tracking-tight">La curiosidad también forma parte del stack.</p>
-                <p className="mt-3 text-xs leading-6 text-black/55">Formación continua en arquitectura de software, IA, producto y sistemas geoespaciales.</p>
+                <p className="mt-3 text-xs leading-6 text-black/55">Formación continua en arquitectura de software, IA, producto y herramientas espaciales cuando el proyecto lo necesita.</p>
               </div>
             </div>
           </Reveal>

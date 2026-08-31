@@ -12,13 +12,15 @@ export function About() {
       <div className="container-site">
         <div className="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-end lg:gap-20">
           <Reveal>
-            <SectionHeading eyebrow="01 / Sobre mí" title="Complejidad dentro. Claridad fuera." />
+            <div className="section-kicker">
+              <SectionHeading eyebrow="01 / Sobre mí" title="Entender el problema. Construir con claridad." />
+            </div>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="max-w-3xl text-pretty text-2xl font-medium leading-[1.3] tracking-[-0.04em] text-neutral-900 sm:text-3xl lg:text-[2.55rem]">
-              Conecto desarrollo full stack, datos geoespaciales e IA para crear productos que
-              <span className="mx-2 inline-block -rotate-1 bg-[#b8ff3d] px-2 text-black">resuelven, automatizan</span>
-              y escalan.
+              Mi trabajo combina desarrollo full stack, datos e IA para construir productos
+              <span className="mx-2 inline-block -rotate-1 bg-[#b8ff3d] px-2 text-black">claros, útiles</span>
+              y sostenibles.
             </p>
           </Reveal>
         </div>
@@ -42,10 +44,10 @@ export function About() {
                   <div>
                     <p className="font-mono text-[10px] text-[#b8ff3d]">01 — FILOSOFÍA</p>
                     <h3 className="mt-4 max-w-md text-3xl font-semibold leading-[1.05] tracking-[-.05em] sm:text-4xl">
-                      No solo escribo código. Diseño sistemas con intención.
+                      Entiendo el contexto antes de elegir una solución.
                     </h3>
                     <p className="mt-5 max-w-md text-sm leading-7 text-white/45">
-                      Recorro el ciclo completo: investigación, UX, frontend, APIs, datos, despliegue y observabilidad. Así cada decisión técnica conserva una visión de producto.
+                      Me involucro en las etapas necesarias: investigación, UX, frontend, APIs, datos, despliegue y observabilidad. Esto ayuda a mantener las decisiones técnicas alineadas con el objetivo del producto.
                     </p>
                   </div>
 
@@ -98,7 +100,7 @@ export function About() {
               <div className="relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[.18em] text-white/50">Experiencia aplicada</span>
                 <p className="mt-8 max-w-sm text-xl font-medium leading-snug tracking-tight">
-                  Drones, ortomosaicos, visión computacional, agentes, Office y AutoCAD.
+                  Visión computacional, agentes, Office, AutoCAD y soluciones geoespaciales cuando aportan valor.
                 </p>
                 <p className="mt-4 text-xs leading-6 text-white/55">Tecnologías distintas. Un mismo objetivo: eliminar fricción y desbloquear valor.</p>
               </div>

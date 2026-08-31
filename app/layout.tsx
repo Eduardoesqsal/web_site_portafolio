@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Desarrollador Full Stack especializado en aplicaciones geoespaciales, inteligencia artificial, visión por computadora, agentes y automatización.",
+    "Desarrollador Full Stack especializado en productos web, inteligencia artificial, visión por computadora, automatización y soluciones geoespaciales cuando aportan valor.",
   keywords: [
     "desarrollador full stack",
-    "desarrollo geoespacial",
-    "GeoAI",
+    "desarrollo de software",
+    "inteligencia artificial aplicada",
     "computer vision",
-    "agentes de inteligencia artificial",
+    "automatización",
     "PostGIS",
     "React",
     "Next.js",
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — Software para el mundo real`,
     description:
-      "Productos web, sistemas GIS e inteligencia artificial diseñados para resolver problemas reales.",
+      "Productos web, automatización e inteligencia artificial diseñados para resolver problemas reales.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Desarrollador de software`,
-    description: "Desarrollo web, aplicaciones geoespaciales e inteligencia artificial aplicada.",
+    description: "Desarrollo web, inteligencia artificial aplicada y automatización.",
   },
   category: "technology",
 };
@@ -65,7 +65,7 @@ const structuredData = {
   email: `mailto:${siteConfig.email}`,
   knowsAbout: [
     "Full Stack Development",
-    "Geographic Information Systems",
+    "Software Architecture",
     "Artificial Intelligence",
     "Computer Vision",
     "React",
