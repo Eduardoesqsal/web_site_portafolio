@@ -14,7 +14,7 @@ export function createCvPdf() {
     "0.2 0.83 0.6 rg 42 754 24 5 re f",
     text(25, 42, 730, siteConfig.name, 1),
     text(11, 42, 712, "DESARROLLADOR DE SOFTWARE", 0.78),
-    text(9, 42, 681, `${siteConfig.location}  |  ${siteConfig.email}`, 0.38),
+    text(9, 42, 681, `${siteConfig.location}  |  WhatsApp ${siteConfig.whatsappLabel}`, 0.38),
     text(14, 42, 645, "PERFIL"),
     "0.15 0.72 0.52 rg 42 637 42 2 re f",
     text(10, 42, 615, "Desarrollador Full Stack especializado en productos web,", 0.3),

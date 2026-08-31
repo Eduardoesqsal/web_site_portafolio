@@ -21,6 +21,7 @@ import type {
   Experience,
   NavItem,
   Project,
+  Review,
   Service,
   TechCategory,
 } from "@/types";
@@ -47,6 +48,7 @@ export const navigation: NavItem[] = [
   { label: "Stack", href: "#stack" },
   { label: "Proyectos", href: "#proyectos" },
   { label: "Experiencia", href: "#experiencia" },
+  { label: "Reseñas", href: "#resenas" },
   { label: "Servicios", href: "#servicios" },
 ];
 
@@ -315,6 +317,27 @@ export const developmentTypes: DevelopmentType[] = [
     description:
       "Despliego proyectos completos, desde una página estática hasta una aplicación con backend, base de datos y automatizaciones, con servidores Linux, contenedores en Docker, pipelines de CI/CD y despliegues en AWS.",
     technologies: ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Linux", "Docker", "CI/CD", "AWS"],
+  },
+];
+
+export const reviews: Review[] = [
+  {
+    name: "Mariana G.",
+    role: "Product Manager · Proyecto e-commerce",
+    rating: 5,
+    text: "Impecable. Entendió rápido el flujo de compra, entregó una tienda rápida y bien cuidada y resolvió cada duda con claridad. Volvería a trabajar con él sin pensarlo.",
+  },
+  {
+    name: "Carlos R.",
+    role: "Cliente · Identificación biométrica",
+    rating: 5,
+    text: "El sistema de identificación quedó justo como lo necesitábamos. Muy buena comunicación, entregas a tiempo y atención al detalle en la trazabilidad de eventos.",
+  },
+  {
+    name: "Ana L.",
+    role: "Operaciones · Geoportal",
+    rating: 5,
+    text: "Tomó un proceso técnico complejo (ortomosaicos y análisis espacial) y lo convirtió en una herramienta clara. Sabía exactamente qué preguntar para despejar el camino.",
   },
 ];
 

@@ -1,52 +1,39 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { AlertCircle, ArrowRight, CheckCircle2, LoaderCircle } from "lucide-react";
+import { CheckCircle2, MessageCircle } from "lucide-react";
 import { type FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
-type FormStatus =
-  | { state: "idle" }
-  | { state: "loading" }
-  | { state: "success"; message: string }
-  | { state: "error"; message: string };
+import { siteConfig } from "@/lib/site-data";
 
 export function ContactForm() {
-  const [status, setStatus] = useState<FormStatus>({ state: "idle" });
+  const [sent, setSent] = useState(false);
   const reduceMotion = useReducedMotion();
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus({ state: "loading" });
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData)),
-      });
-      const data = (await response.json()) as { message?: string };
+    const name = String(formData.get("name") ?? "").trim();
+    const projectType = String(formData.get("projectType") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
 
-      if (!response.ok) throw new Error(data.message ?? "No se pudo enviar el mensaje.");
+    const body = [
+      `*Nuevo mensaje desde tu porfolio*`,
+      ``,
+      `Nombre: ${name || "(sin nombre)"}`,
+      `Tipo de proyecto: ${projectType || "Sin especificar"}`,
+      ``,
+      `Mensaje: ${message}`,
+    ].join("\n");
 
-      setStatus({
-        state: "success",
-        message: data.message ?? "Mensaje enviado. Te responderé muy pronto.",
-      });
-      form.reset();
-    } catch (error) {
-      setStatus({
-        state: "error",
-        message: error instanceof Error ? error.message : "Ocurrió un error inesperado.",
-      });
-    }
+    window.open(`${siteConfig.whatsapp}?text=${encodeURIComponent(body)}`, "_blank", "noopener,noreferrer");
+    setSent(true);
+    form.reset();
   }
-
-  const isLoading = status.state === "loading";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -54,29 +41,26 @@ export function ContactForm() {
         <Field label="Nombre" htmlFor="name">
           <Input id="name" name="name" autoComplete="name" placeholder="Tu nombre" required minLength={2} maxLength={80} />
         </Field>
-        <Field label="Correo" htmlFor="email">
-          <Input id="email" name="email" type="email" autoComplete="email" placeholder="tu@correo.com" required maxLength={160} />
+        <Field label="Tipo de proyecto" htmlFor="projectType">
+          <select
+            id="projectType"
+            name="projectType"
+            defaultValue=""
+            required
+            className="h-12 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 text-sm text-neutral-700 shadow-sm outline-none transition hover:border-neutral-300 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
+          >
+            <option value="" disabled>
+              Selecciona una opción
+            </option>
+            <option>Aplicación web</option>
+            <option>Datos espaciales</option>
+            <option>IA / Computer Vision</option>
+            <option>Agente y automatización</option>
+            <option>API / Backend</option>
+            <option>Otro</option>
+          </select>
         </Field>
       </div>
-      <Field label="Tipo de proyecto" htmlFor="projectType">
-        <select
-          id="projectType"
-          name="projectType"
-          defaultValue=""
-          required
-          className="h-12 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 text-sm text-neutral-700 shadow-sm outline-none transition hover:border-neutral-300 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
-        >
-          <option value="" disabled>
-            Selecciona una opción
-          </option>
-          <option>Aplicación web</option>
-          <option>Datos espaciales</option>
-          <option>IA / Computer Vision</option>
-          <option>Agente y automatización</option>
-          <option>API / Backend</option>
-          <option>Otro</option>
-        </select>
-      </Field>
       <Field label="Cuéntame sobre el reto" htmlFor="message">
         <Textarea
           id="message"
@@ -94,38 +78,25 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xs text-[10px] leading-4 text-neutral-400">
-          Al enviar aceptas que use tus datos únicamente para responder esta solicitud.
+          Se abrirá WhatsApp con tu mensaje listo para enviar. Sin costo para ti.
         </p>
-        <Button type="submit" size="lg" disabled={isLoading} className="sm:min-w-40">
-          {isLoading ? (
-            <>
-              <LoaderCircle className="animate-spin" /> Enviando
-            </>
-          ) : (
-            <>
-              Enviar mensaje <ArrowRight />
-            </>
-          )}
+        <Button type="submit" size="lg" className="sm:min-w-40">
+          <MessageCircle /> Enviar por WhatsApp
         </Button>
       </div>
 
       <div className="min-h-10" aria-live="polite">
         <AnimatePresence mode="wait">
-          {status.state === "success" || status.state === "error" ? (
+          {sent ? (
             <motion.div
-              key={status.state}
+              key="sent"
               initial={reduceMotion ? false : { opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               exit={reduceMotion ? undefined : { opacity: 0 }}
-              className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-xs ${
-                status.state === "success"
-                  ? "bg-emerald-50 text-emerald-800"
-                  : "bg-red-50 text-red-700"
-              }`}
-              role={status.state === "error" ? "alert" : "status"}
+              className="flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2.5 text-xs text-emerald-800"
+              role="status"
             >
-              {status.state === "success" ? <CheckCircle2 className="size-4" /> : <AlertCircle className="size-4" />}
-              {status.message}
+              <CheckCircle2 className="size-4" /> Listo. Se abrió WhatsApp con tu mensaje preparado.
             </motion.div>
           ) : null}
         </AnimatePresence>

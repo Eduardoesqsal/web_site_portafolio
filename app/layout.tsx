@@ -62,7 +62,6 @@ const structuredData = {
   name: siteConfig.name,
   url: siteConfig.url,
   jobTitle: "Desarrollador de software",
-  email: `mailto:${siteConfig.email}`,
   knowsAbout: [
     "Full Stack Development",
     "Software Architecture",
