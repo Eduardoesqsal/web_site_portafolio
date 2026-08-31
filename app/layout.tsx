@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Desarrollador Full Stack especializado en productos web, inteligencia artificial, visión por computadora, automatización y soluciones geoespaciales cuando aportan valor.",
   keywords: [
     "desarrollador full stack",
-    "desarrollo de software",
+    "desarrollador de software",
     "inteligencia artificial aplicada",
     "computer vision",
     "automatización",

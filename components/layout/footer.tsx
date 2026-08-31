@@ -14,7 +14,7 @@ export function Footer() {
               <span className="text-base font-semibold">{siteConfig.name}</span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/45">
-              Desarrollo de software, inteligencia artificial y automatización para resolver
+Desarrollador de software, inteligencia artificial y automatización para resolver
               problemas reales.
             </p>
           </div>

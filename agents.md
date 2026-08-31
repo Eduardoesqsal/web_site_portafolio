@@ -355,3 +355,244 @@ Concurrencia: si llega un push nuevo mientras hay un job corriendo, cancela el a
 - Repositorio ya inicializado en GitHub con la rama `main`.
 - Si se clona en otro equipo: `git clone https://github.com/Eduardoesqsal/web_site_portafolio.git`.
 - Los cambios se suben con `git commit` + `git push origin main`.
+
+## VERCEL
+# CORREGIR ERROR DE BUILD EN VERCEL — NEXT.JS
+
+Actúa como **Senior Next.js / TypeScript / Vercel Developer**.
+
+El proyecto falla durante `pnpm run build` en Vercel con este error:
+
+```text
+Error: Failed to collect configuration for /_not-found
+
+TypeError: Invalid URL
+    at ...
+code: 'ERR_INVALID_URL'
+input: ''
+
+Failed to collect page data for /_not-found
+
+Build error occurred
+Command "pnpm run build" exited with 1
+```
+
+También aparece este warning:
+
+```text
+Ignored build scripts: sharp, unrs-resolver.
+Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+```
+
+## OBJETIVO
+
+Encontrar la **causa real** del `TypeError: Invalid URL` y corregirla para que:
+
+```bash
+pnpm run build
+```
+
+termine correctamente y Vercel pueda desplegar el proyecto.
+
+## REGLAS IMPORTANTES
+
+1. **NO asumas que el problema es `sharp`.**
+2. El warning de `sharp` / `unrs-resolver` no debe tratarse como la causa principal a menos que la investigación demuestre lo contrario.
+3. Investiga primero el error:
+
+```text
+TypeError: Invalid URL
+input: ''
+```
+
+4. Busca específicamente usos como:
+
+```ts
+new URL(process.env.X)
+```
+
+```ts
+new URL(process.env.NEXT_PUBLIC_X)
+```
+
+```ts
+new URL("")
+```
+
+y cualquier configuración que construya URLs a partir de variables de entorno.
+
+5. Revisa todo el proyecto buscando variables de entorno relacionadas con URLs, por ejemplo:
+
+```text
+NEXT_PUBLIC_SITE_URL
+NEXT_PUBLIC_API_URL
+NEXT_PUBLIC_SUPABASE_URL
+SUPABASE_URL
+NEXTAUTH_URL
+```
+
+No te limites a estos nombres; identifica cualquier variable usada como URL.
+
+6. Revisa especialmente:
+
+```text
+app/layout.tsx
+app/not-found.tsx
+app/page.tsx
+src/
+next.config.*
+middleware.*
+lib/
+utils/
+config/
+```
+
+y cualquier archivo importado por estos.
+
+7. El hecho de que el error mencione:
+
+```text
+/_not-found
+```
+
+NO significa automáticamente que `not-found.tsx` sea el archivo culpable. Rastrea los imports y la configuración que Next.js ejecuta durante el build.
+
+8. Comprueba si alguna variable de entorno puede llegar como:
+
+```text
+undefined
+""
+```
+
+o una cadena inválida.
+
+9. Si una variable debe ser una URL, valida correctamente su existencia y formato.
+
+Por ejemplo, evita código que provoque:
+
+```ts
+new URL(process.env.SOME_URL || "")
+```
+
+si esa URL es obligatoria.
+
+10. Si la variable es obligatoria para producción, implementa una solución correcta y explícita, por ejemplo una validación clara que indique qué variable falta.
+
+11. Si la variable realmente es opcional, modifica el código para que el build funcione correctamente cuando no esté definida.
+
+12. **NO hardcodees URLs de producción inventadas.**
+
+13. **NO cambies la arquitectura del proyecto.**
+
+14. **NO elimines funcionalidades para ocultar el error.**
+
+15. **NO desactives temporalmente el chequeo de errores.**
+
+16. Mantén el proyecto compatible con Vercel.
+
+## INVESTIGACIÓN
+
+Primero ejecuta:
+
+```bash
+pnpm run build
+```
+
+Luego busca en todo el proyecto:
+
+```bash
+rg "new URL" .
+```
+
+y:
+
+```bash
+rg "process\.env" .
+```
+
+También revisa:
+
+```bash
+rg "NEXT_PUBLIC|SUPABASE_URL|API_URL|SITE_URL|NEXTAUTH_URL" .
+```
+
+Identifica exactamente qué código puede estar generando:
+
+```text
+new URL("")
+```
+
+o una URL inválida durante el build.
+
+## CORRECCIÓN
+
+Una vez encontrada la causa:
+
+1. Corrige el código.
+2. No modifiques archivos que no sean necesarios.
+3. Mantén TypeScript correctamente tipado.
+4. Mantén compatibilidad con producción/Vercel.
+5. Ejecuta nuevamente:
+
+```bash
+pnpm run build
+```
+
+6. Si falla nuevamente, continúa investigando hasta encontrar la causa real.
+
+## VALIDACIÓN FINAL
+
+No declares el problema solucionado solamente porque cambiaste el código.
+
+Debes comprobar que:
+
+```bash
+pnpm run build
+```
+
+finaliza con:
+
+```text
+✓ Build completed
+```
+
+o equivalente y:
+
+```text
+exit code 0
+```
+
+## RESULTADO QUE QUIERO
+
+Al terminar dime:
+
+### 1. CAUSA
+
+Qué archivo y qué código estaba provocando:
+
+```text
+TypeError: Invalid URL
+input: ''
+```
+
+### 2. SOLUCIÓN
+
+Qué modificaste exactamente.
+
+### 3. VARIABLES DE ENTORNO
+
+Indica si falta alguna variable que deba configurarse en Vercel.
+
+### 4. VALIDACIÓN
+
+Indica el resultado final de:
+
+```bash
+pnpm run build
+```
+
+### 5. CAMBIOS
+
+Dame una lista breve de los archivos modificados.
+
+**No me des una solución teórica. Investiga el código real del proyecto, corrígelo y verifica el build antes de decir que está solucionado.**

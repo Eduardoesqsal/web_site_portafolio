@@ -56,91 +56,9 @@ export function Hero() {
       <div className="absolute -right-40 top-28 -z-10 size-[38rem] rounded-full bg-[#b8ff3d]/10 blur-[130px]" />
       <div className="absolute left-[58%] top-[14%] -z-10 h-[28rem] w-px rotate-[28deg] bg-gradient-to-b from-transparent via-white/15 to-transparent" />
 
-      <div className="container-site grid min-h-[calc(100vh-8rem)] items-center gap-14 pb-12 pt-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-8 lg:pb-16 lg:pt-10">
+      <div className="container-site flex min-h-[calc(100vh-8rem)] flex-col items-center gap-10 pb-12 pt-8 text-center lg:gap-12 lg:pb-16 lg:pt-10">
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10"
-        >
-          <div className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[.2em] text-white/45">
-            <span className="relative flex size-2.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#b8ff3d] opacity-60" />
-              <span className="relative inline-flex size-2.5 rounded-full bg-[#b8ff3d]" />
-            </span>
-            Disponible para proyectos selectos
-            <span className="hidden h-px w-12 bg-white/15 sm:block" />
-            <span className="hidden text-white/25 sm:block">México · Remoto</span>
-          </div>
-
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#b8ff3d]">
-            {"// full stack · ai · product · geospatial"}
-          </p>
-          <h1 className="max-w-[48rem] text-balance text-[clamp(3.4rem,8.5vw,7.6rem)] font-semibold leading-[.84] tracking-[-0.08em]">
-            Desarrollo software para convertir ideas en <span className="relative inline-block text-[#b8ff3d]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#b8ff3d]/40" /></span>.
-          </h1>
-          <p className="mt-8 max-w-xl text-pretty text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
-            Aporto desarrollo full stack, automatización, visión por computadora y soluciones
-            geoespaciales cuando el proyecto lo necesita. Trabajo para que el producto quede
-            <span className="text-white"> claro, estable y fácil de usar.</span>
-          </p>
-
-          <div className="mt-8">
-            <p className="mb-3 font-mono text-[9px] uppercase tracking-[.2em] text-white/30">
-              Stack principal
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Next.js",
-                "React",
-                "TypeScript",
-                "Tailwind CSS",
-                "Python",
-                "FastAPI",
-                "PostgreSQL",
-                "PostGIS",
-                "Computer Vision",
-                "LLMs",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-[9px] text-white/70"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="group">
-              <a href="#proyectos">
-                Explorar mi trabajo
-                <ArrowRight className="transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="/api/cv" download>
-                <Download />
-                Descargar CV
-              </a>
-            </Button>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-white/35">
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin className="size-3.5 text-[#b8ff3d]" />
-              {siteConfig.location}
-            </span>
-            <span className="hidden h-3 w-px bg-white/15 sm:block" />
-            <span className="inline-flex items-center gap-1.5">
-              <Check className="size-3.5 text-[#b8ff3d]" /> Español · Inglés básico-intermedio
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="relative mx-auto aspect-square w-full max-w-[540px] lg:ml-auto"
+          className="relative aspect-square w-full max-w-[min(72vw,420px)]"
           initial={reduceMotion ? false : { opacity: 0, scale: 0.92, rotate: -3 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
@@ -192,6 +110,88 @@ export function Hero() {
           <div className="absolute bottom-[1%] left-[15%] z-20 rounded-full border border-white/15 bg-white px-4 py-2.5 text-[10px] font-semibold text-black shadow-[0_18px_45px_rgba(0,0,0,.35)]">
             <span className="mr-2 inline-block size-1.5 rounded-full bg-emerald-500" />
             Systems online
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          className="relative z-10 w-full"
+        >
+          <div className="mb-7 flex items-center justify-center gap-3 text-[10px] font-semibold uppercase tracking-[.2em] text-white/45">
+            <span className="relative flex size-2.5">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#b8ff3d] opacity-60" />
+              <span className="relative inline-flex size-2.5 rounded-full bg-[#b8ff3d]" />
+            </span>
+            Disponible para proyectos selectos
+            <span className="hidden h-px w-12 bg-white/15 sm:block" />
+            <span className="hidden text-white/25 sm:block">México · Remoto</span>
+          </div>
+
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#b8ff3d]">
+            {"// full stack · ai · product · geospatial"}
+          </p>
+          <h1 className="mx-auto max-w-[48rem] text-balance text-[clamp(3.4rem,8.5vw,7.6rem)] font-semibold leading-[.84] tracking-[-0.08em]">
+            Desarrollo software para convertir ideas en <span className="relative inline-block text-[#b8ff3d]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#b8ff3d]/40" /></span>.
+          </h1>
+          <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
+            Aporto desarrollo full stack, automatización, visión por computadora y soluciones
+            geoespaciales cuando el proyecto lo necesita. Trabajo para que el producto quede
+            <span className="text-white"> claro, estable y fácil de usar.</span>
+          </p>
+
+          <div className="mt-8">
+            <p className="mb-3 font-mono text-[9px] uppercase tracking-[.2em] text-white/30">
+              Stack principal
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {[
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Python",
+                "FastAPI",
+                "PostgreSQL",
+                "PostGIS",
+                "Computer Vision",
+                "LLMs",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-mono text-[9px] text-white/70"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <Button asChild size="lg" className="group">
+              <a href="#proyectos">
+                Explorar mi trabajo
+                <ArrowRight className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="/api/cv" download>
+                <Download />
+                Descargar CV
+              </a>
+            </Button>
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/35">
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="size-3.5 text-[#b8ff3d]" />
+              {siteConfig.location}
+            </span>
+            <span className="hidden h-3 w-px bg-white/15 sm:block" />
+            <span className="inline-flex items-center gap-1.5">
+              <Check className="size-3.5 text-[#b8ff3d]" /> Español · Inglés básico-intermedio
+            </span>
           </div>
         </motion.div>
       </div>

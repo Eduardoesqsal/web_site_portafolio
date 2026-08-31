@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Lightbulb } from "lucide-react";
+import { ArrowUpRight, Github, Lightbulb, Lock } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { ProjectVisual } from "@/components/project-visual";
 import { SectionHeading } from "@/components/section-heading";
@@ -46,10 +46,20 @@ export function Projects() {
                   </div>
 
                   <p className="mt-4 text-sm leading-6 text-black/50">{project.description}</p>
-                  <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#b8ff3d] bg-[#f4f4ee] px-4 py-3">
-                    <Lightbulb className="mt-0.5 size-3.5 shrink-0 text-black" />
-                    <p className="text-[11px] leading-5 text-black/50">{project.problem}</p>
-                  </div>
+                  {project.confidential ? (
+                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-violet-500 bg-violet-50 px-4 py-3">
+                      <Lock className="mt-0.5 size-3.5 shrink-0 text-violet-600" />
+                      <p className="text-[11px] leading-5 text-black/50">
+                        Proyecto confidencial. Por política del cliente solo comparto imágenes y
+                        videos de referencia; el código y los datos internos no son públicos.
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#b8ff3d] bg-[#f4f4ee] px-4 py-3">
+                      <Lightbulb className="mt-0.5 size-3.5 shrink-0 text-black" />
+                      <p className="text-[11px] leading-5 text-black/50">{project.problem}</p>
+                    </div>
+                  )}
 
                   <div className="mt-auto flex flex-wrap items-end justify-between gap-5 pt-6">
                     <div className="flex flex-wrap gap-1.5">
@@ -57,9 +67,15 @@ export function Projects() {
                         <span key={technology} className="rounded-full border border-black/10 px-2.5 py-1 font-mono text-[8px] text-black/45">{technology}</span>
                       ))}
                     </div>
-                    <a href={project.githubUrl} target="_blank" rel="noreferrer" className="focus-ring inline-flex items-center gap-1.5 rounded text-[10px] font-semibold text-black/35 transition hover:text-black">
-                      <Github className="size-3.5" /> Source
-                    </a>
+                    {project.confidential ? (
+                      <span className="focus-ring inline-flex items-center gap-1.5 rounded text-[10px] font-semibold text-black/35">
+                        <Lock className="size-3.5" /> Solo visuales
+                      </span>
+                    ) : (
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer" className="focus-ring inline-flex items-center gap-1.5 rounded text-[10px] font-semibold text-black/35 transition hover:text-black">
+                        <Github className="size-3.5" /> Source
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>

@@ -31,7 +31,7 @@ export const siteConfig = {
   profilePhoto: "/eduardo-esquivel.jpg",
   description:
     "Desarrollo productos digitales que convierten procesos, datos e ideas en software claro, rápido y útil.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000",
   email: "hola@tudominio.com",
   location: "México · Disponible en remoto",
   github: "https://github.com/",
@@ -151,13 +151,14 @@ export const projects: Project[] = [
     name: "GeoField App",
     category: "Geoportal / ortomosaicos",
     description:
-      "Geoportal para análisis de ortomosaicos con backend propio y entrenamiento de algoritmos de visión por computadora.",
+      "Geoportal para análisis de ortomosaicos con backend propio y entrenamiento de algoritmos de visión por computadora. Proyecto confidencial: comparto imágenes y videos de referencia, el código interno no es público.",
     problem:
       "Transforma imágenes aéreas en información útil para análisis técnico y toma de decisiones.",
     technologies: ["Python", "PostGIS", "FastAPI", "OpenLayers", "Computer Vision"],
     visual: "map",
     demoUrl: "#contacto",
     githubUrl: siteConfig.github,
+    confidential: true,
   },
   {
     name: "AutoDraft AI",
