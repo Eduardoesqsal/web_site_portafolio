@@ -18,9 +18,9 @@ export function About() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="max-w-3xl text-pretty text-2xl font-medium leading-[1.3] tracking-[-0.04em] text-neutral-900 sm:text-3xl lg:text-[2.55rem]">
-              Mi trabajo combina desarrollo full stack, datos e IA para construir productos
-              <span className="mx-2 inline-block -rotate-1 bg-[#b8ff3d] px-2 text-black">claros, útiles</span>
-              y sostenibles.
+Soy desarrollador de software con experiencia construyendo productos full stack y entrenando
+              inteligencia artificial para resolver problemas
+              <span className="mx-2 inline-block -rotate-1 bg-[#b8ff3d] px-2 text-black">reales</span>.
             </p>
           </Reveal>
         </div>
@@ -47,7 +47,7 @@ export function About() {
                       Entiendo el contexto antes de elegir una solución.
                     </h3>
                     <p className="mt-5 max-w-md text-sm leading-7 text-white/45">
-                      Me involucro en las etapas necesarias: investigación, UX, frontend, APIs, datos, despliegue y observabilidad. Esto ayuda a mantener las decisiones técnicas alineadas con el objetivo del producto.
+                      He llevado proyectos de idea a producción combinando HTML, CSS, JavaScript, React, TypeScript, Next.js, Express, PostgreSQL, Python, FastAPI, Flask y Supabase, con entregas automatizadas usando Docker, Git, GitHub Actions y CI/CD. También desarrollo y entreno modelos de inteligencia artificial (computer vision, agentes y LLMs) para aplicarlos a necesidades concretas.
                     </p>
                   </div>
 
