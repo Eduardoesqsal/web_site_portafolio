@@ -329,7 +329,8 @@ https://face-biometric-a-i-1.onrender.com/
 
 #repo (configuración de GitHub)
 
-- Repositorio remoto (origin): `https://github.com/Eduardoesqsal/WEB_SITE.git`
+- Repositorio remoto (principal): `https://github.com/Eduardoesqsal/web_site_portafolio.git`
+- Remote `origin` histórico: `https://github.com/Eduardoesqsal/WEB_SITE.git` (duplicado del proyecto)
 - Rama principal: `main`
 - Gestor de paquetes: `pnpm` (versión fijada en `package.json`, `packageManager: pnpm@10.14.0`)
 - Node requerido en CI: `22`
@@ -352,5 +353,5 @@ Concurrencia: si llega un push nuevo mientras hay un job corriendo, cancela el a
 ## Estado del repositorio en GitHub
 
 - Repositorio ya inicializado en GitHub con la rama `main`.
-- Si se clona en otro equipo: `git clone https://github.com/Eduardoesqsal/WEB_SITE.git`.
+- Si se clona en otro equipo: `git clone https://github.com/Eduardoesqsal/web_site_portafolio.git`.
 - Los cambios se suben con `git commit` + `git push origin main`.
