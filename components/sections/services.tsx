@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { services } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
-const phases = ["Descubrir", "DiseÃƒÂ±ar", "Construir", "Lanzar"];
+const phases = ["Descubrir", "Diseñar", "Construir", "Lanzar"];
 
 export function Services() {
   const [active, setActive] = useState(0);
@@ -26,7 +26,7 @@ export function Services() {
             <SectionHeading
               eyebrow="05 / Servicios"
               title="Una idea. Distintas formas de hacerla real."
-              description="Selecciona una especialidad para explorar cÃƒÂ³mo puedo integrarme a tu proyecto o equipo."
+              description="Selecciona una especialidad para explorar cómo puedo integrarme a tu proyecto o equipo."
               invert
             />
             <div className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[.16em] text-white/30">
@@ -89,7 +89,7 @@ export function Services() {
 
                   <div className="mt-auto max-w-xl pt-20">
                     <h3 className="text-4xl font-semibold leading-[.95] tracking-[-.055em] sm:text-6xl">{service.title}</h3>
-                    <p className="mt-6 max-w-lg text-sm leading-7 text-white/45 sm:text-base">{service.description} Definimos una arquitectura pragmÃƒÂ¡tica y un proceso visible de principio a fin.</p>
+                    <p className="mt-6 max-w-lg text-sm leading-7 text-white/45 sm:text-base">{service.description} Definimos una arquitectura pragmática y un proceso visible de principio a fin.</p>
 
                     <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-4">
                       {phases.map((phase, index) => (
@@ -104,7 +104,7 @@ export function Services() {
                     </div>
 
                     <a href="#contacto" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-xs font-semibold text-black transition hover:-translate-y-0.5 hover:bg-[#18c7d6]">
-                      Explorar esta soluciÃƒÂ³n <ArrowRight className="size-3.5" />
+                      Explorar esta solución <ArrowRight className="size-3.5" />
                     </a>
                   </div>
                 </motion.div>
@@ -118,8 +118,8 @@ export function Services() {
             <div className="flex items-center gap-4">
               <span className="grid size-11 place-items-center rounded-full bg-[#18d38a]/15 text-[#18d38a]"><Layers3 className="size-5" /></span>
               <div>
-                <p className="text-sm font-semibold">Ã‚Â¿Tu reto mezcla varias disciplinas?</p>
-                <p className="mt-1 text-xs text-white/35">Es lo habitual. DiseÃƒÂ±emos una soluciÃƒÂ³n a tu medida.</p>
+                <p className="text-sm font-semibold">¿Tu reto mezcla varias disciplinas?</p>
+                <p className="mt-1 text-xs text-white/35">Es lo habitual. Diseñemos una solución a tu medida.</p>
               </div>
             </div>
             <a href="#contacto" className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold text-[#18c7d6] transition hover:gap-3">Evaluar mi proyecto <ArrowDownRight className="size-3.5" /></a>

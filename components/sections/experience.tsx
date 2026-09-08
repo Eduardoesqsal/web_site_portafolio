@@ -14,15 +14,15 @@ export function Experience() {
               <SectionHeading
                 eyebrow="04 / Experiencia"
                 title="Aprender haciendo. Mejorar lanzando."
-                description="Una trayectoria en la intersecciÃƒÂ³n entre software, datos e inteligencia artificial aplicada."
+                description="Una trayectoria en la intersección entre software, datos e inteligencia artificial aplicada."
               />
               <div className="mt-9 rounded-[1.75rem] bg-[#18c7d6] p-6">
                 <div className="flex items-start justify-between">
                   <span className="grid size-11 place-items-center rounded-full bg-black text-[#18c7d6]"><GraduationCap className="size-5" /></span>
                   <ArrowUpRight className="size-4 text-black/30" />
                 </div>
-                <p className="mt-10 text-xl font-semibold leading-tight tracking-tight">La curiosidad tambiÃƒÂ©n forma parte del stack.</p>
-                <p className="mt-3 text-xs leading-6 text-black/55">FormaciÃƒÂ³n continua en arquitectura de software, IA, producto y herramientas espaciales cuando el proyecto lo necesita.</p>
+                <p className="mt-10 text-xl font-semibold leading-tight tracking-tight">La curiosidad también forma parte del stack.</p>
+                <p className="mt-3 text-xs leading-6 text-black/55">Formación continua en arquitectura de software, IA, producto y herramientas espaciales cuando el proyecto lo necesita.</p>
               </div>
             </div>
           </Reveal>

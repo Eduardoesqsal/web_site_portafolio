@@ -14,7 +14,7 @@ export const companyConfig = {
   name: "Dev Technology",
   tagline: "Soluciones tecnológicas inteligentes",
   description:
-    "Desarrollo software para automatizar procesos, crear productos digitales y construir soluciones modernas con una estética limpia y clara.",
+    "Desarrollamos software alineado con necesidades específicas, con arquitectura clara, buenas prácticas y enfoque en resultados reales.",
   portfolioHref: "/portafolio",
   contactHref: "#contacto",
 } as const;

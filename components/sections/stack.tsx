@@ -25,9 +25,9 @@ export function Stack() {
         <Reveal>
           <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-10 lg:flex-row lg:items-end">
             <SectionHeading
-              eyebrow="02 / Stack tecnolÃ³gico"
-              title="Herramientas que hablan entre sÃ­."
-              description="Un ecosistema moderno para diseÃ±ar interfaces, mover datos, entrenar modelos y mantener productos confiables en producciÃ³n. TambiÃ©n uso herramientas espaciales cuando el problema lo requiere."
+              eyebrow="02 / Stack tecnológico"
+              title="Herramientas que hablan entre sí."
+              description="Un ecosistema moderno para diseñar interfaces, mover datos, entrenar modelos y mantener productos confiables en producción. También uso herramientas espaciales cuando el problema lo requiere."
               invert
             />
             <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-[9px] uppercase tracking-[.14em] text-white/35">

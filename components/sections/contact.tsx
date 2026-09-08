@@ -19,10 +19,10 @@ export function Contact() {
                 <MessageSquareText className="size-3.5" /> Abierto a colaborar
               </div>
               <h2 className="mt-7 text-balance text-5xl font-semibold leading-[.87] tracking-[-0.07em] sm:text-7xl lg:text-[6.4rem]">
-                Ã‚Â¿QuÃƒÂ© vamos a construir?
+                ¿Qué vamos a construir?
               </h2>
               <p className="mt-7 max-w-md text-pretty text-sm leading-7 text-black/55 sm:text-base">
-                CuÃƒÂ©ntame el problema, incluso si todavÃƒÂ­a no tienes definida la soluciÃƒÂ³n. Te responderÃƒÂ© con preguntas claras y un siguiente paso concreto.
+                Cuéntame el problema, incluso si todavía no tienes definida la solución. Te responderé con preguntas claras y un siguiente paso concreto.
               </p>
 
               <div className="mt-10 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
@@ -33,7 +33,7 @@ export function Contact() {
                 </a>
                 <div className="flex items-center gap-3 rounded-2xl border border-black/15 bg-white/30 p-3 text-sm text-black/60">
                   <span className="grid size-10 place-items-center rounded-xl bg-black text-[#18c7d6]"><MapPin className="size-4" /></span>
-                  <span><span className="block font-mono text-[7px] uppercase tracking-widest text-black/35">UbicaciÃƒÂ³n</span>{siteConfig.location}</span>
+                  <span><span className="block font-mono text-[7px] uppercase tracking-widest text-black/35">Ubicación</span>{siteConfig.location}</span>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ export function Contact() {
               </div>
               <div className="p-5 sm:p-8">
                 <div className="mb-7">
-                  <p className="text-xl font-semibold tracking-tight">Inicia una conversaciÃƒÂ³n</p>
+                  <p className="text-xl font-semibold tracking-tight">Inicia una conversación</p>
                   <p className="mt-1 text-xs text-neutral-500">Sin compromiso. Primero entendemos el reto.</p>
                 </div>
                 <ContactForm />

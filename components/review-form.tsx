@@ -30,7 +30,7 @@ export function ReviewForm() {
     const text = String(formData.get("review") ?? "").trim();
 
     const message = [
-      `*ReseÃƒÂ±a / crÃƒÂ­tica sobre tu trabajo*`,
+      `*Reseña / crítica sobre tu trabajo*`,
       ``,
       `Estrellas: ${rating}/5`,
       name ? `Nombre: ${name}` : "Nombre: (sin nombre)",
@@ -51,8 +51,8 @@ export function ReviewForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       <div>
-        <span className="mb-2 block text-xs font-semibold text-neutral-700">CalificaciÃƒÂ³n</span>
-        <div className="flex items-center gap-1" role="radiogroup" aria-label="CalificaciÃƒÂ³n con estrellas">
+        <span className="mb-2 block text-xs font-semibold text-neutral-700">Calificación</span>
+        <div className="flex items-center gap-1" role="radiogroup" aria-label="Calificación estrellas">
           {[1, 2, 3, 4, 5].map((value) => {
             const filled = value <= (hovered || rating);
             return (
@@ -84,11 +84,11 @@ export function ReviewForm() {
         <Input id="review-name" name="name" placeholder="Nombre (opcional)" autoComplete="name" maxLength={80} />
       </Field>
 
-      <Field label="QuÃƒÂ© opinas de mi trabajo" htmlFor="review-text">
+      <Field label="Qué opinas de mi trabajo" htmlFor="review-text">
         <Textarea
           id="review-text"
           name="review"
-          placeholder="Ã‚Â¿CÃƒÂ³mo fue trabajar conmigo? Ã‚Â¿QuÃƒÂ© te gustÃƒÂ³ y quÃƒÂ© podrÃƒÂ­as sugerir?"
+          placeholder="¿Cómo fue trabajar conmigo? ¿Qué te gustó y qué podrías sugerir?"
           required
           minLength={10}
           maxLength={2000}
@@ -102,10 +102,10 @@ export function ReviewForm() {
 
       <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xs text-[10px] leading-4 text-neutral-400">
-          Tu reseÃƒÂ±a se enviarÃƒÂ¡ por WhatsApp, sin costo para ti.
+          Tu reseña se enviará por WhatsApp, sin costo para ti.
         </p>
         <Button type="submit" size="lg" disabled={showError} className="sm:min-w-40">
-          <MessageCircle /> Enviar crÃƒÂ­tica
+          <MessageCircle /> Enviar crítica
         </Button>
       </div>
 
@@ -120,7 +120,7 @@ export function ReviewForm() {
               className="flex items-center gap-2 rounded-xl bg-[#eef7f8] px-3 py-2.5 text-xs text-[#0d1d28]"
               role="status"
             >
-              <CheckCircle2 className="size-4" /> Gracias. Se abriÃƒÂ³ WhatsApp con tu reseÃƒÂ±a lista para enviar.
+              <CheckCircle2 className="size-4" /> Gracias. Se abrió WhatsApp con tu reseña lista para enviar.
             </motion.div>
           ) : null}
         </AnimatePresence>

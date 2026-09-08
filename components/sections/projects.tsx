@@ -13,7 +13,7 @@ export function Projects() {
             <SectionHeading
               eyebrow="03 / Trabajo seleccionado"
               title="Proyectos desarrollados para necesidades concretas."
-              description="Sistemas diseÃƒÂ±ados alrededor de una necesidad concreta: producto, automatizaciÃƒÂ³n, interfaces y agentes que ejecutan trabajo real."
+              description="Sistemas diseñados alrededor de una necesidad concreta: producto, automatización, interfaces y agentes que ejecutan trabajo real."
             />
             <a href="#contacto" className="focus-ring group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-xs font-semibold text-white transition hover:bg-[linear-gradient(145deg,#0f1d27_0%,#123140_45%,#08302c_100%)] md:self-auto">
               Tengo un reto <ArrowUpRight className="size-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -50,8 +50,8 @@ export function Projects() {
                     <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#18c7d6] bg-[#eef7f8] px-4 py-3">
                       <Lock className="mt-0.5 size-3.5 shrink-0 text-[#0e8e9a]" />
                       <p className="text-[11px] leading-5 text-black/50">
-                        Proyecto confidencial. Por polÃƒÂ­tica del cliente solo comparto imÃƒÂ¡genes y
-                        videos de referencia; el cÃƒÂ³digo y los datos internos no son pÃƒÂºblicos.
+                        Proyecto confidencial. Por política del cliente solo comparto imágenes y
+                        videos de referencia; el código y los datos internos no son públicos.
                       </p>
                     </div>
                   ) : (

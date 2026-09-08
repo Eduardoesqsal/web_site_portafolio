@@ -49,7 +49,7 @@ function GeoFieldMockup() {
     <div className="relative h-full overflow-hidden bg-[#111812]">
       <Image
         src="/geofield.jpeg"
-        alt="Interfaz de GeoField App en laptop y telÃƒÂ©fono"
+        alt="Interfaz de GeoField App en laptop y teléfono"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="object-cover object-center transition duration-700 group-hover:scale-105"
@@ -60,7 +60,7 @@ function GeoFieldMockup() {
       </div>
       <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between sm:bottom-4 sm:left-4 sm:right-4">
         <div>
-          <p className="text-[7px] uppercase tracking-widest text-white/60">Geoportal Ã‚Â· anÃƒÂ¡lisis espacial</p>
+          <p className="text-[7px] uppercase tracking-widest text-white/60">Geoportal · análisis espacial</p>
           <p className="mt-1 text-xs font-semibold text-white">Mapas que ayudan a leer el territorio.</p>
         </div>
         <div className="grid size-8 place-items-center rounded-full border border-white/20 bg-black/35 text-[#18c7d6] backdrop-blur-md">
@@ -76,7 +76,7 @@ function BiometricMockup() {
     <div className="relative h-full overflow-hidden bg-[#17191d]">
       <Image
         src="/biometric.jpeg"
-        alt="Sistema de identificaciÃƒÂ³n biomÃƒÂ©trica BioID"
+        alt="Sistema de identificación biométrica BioID"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="object-cover object-center transition duration-700 group-hover:scale-105"
@@ -87,8 +87,8 @@ function BiometricMockup() {
       </div>
       <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between sm:bottom-4 sm:left-4 sm:right-4">
         <div>
-          <p className="text-[7px] uppercase tracking-widest text-white/60">IdentificaciÃƒÂ³n Ã‚Â· trazabilidad</p>
-          <p className="mt-1 text-xs font-semibold text-white">Registro biomÃƒÂ©trico en un flujo claro.</p>
+          <p className="text-[7px] uppercase tracking-widest text-white/60">Identificación · trazabilidad</p>
+          <p className="mt-1 text-xs font-semibold text-white">Registro biométrico en un flujo claro.</p>
         </div>
         <div className="rounded-full border border-[#18d38a]/35 bg-[#18d38a]/15 px-2 py-1 font-mono text-[7px] text-[#18d38a] backdrop-blur-md">
           VERIFIED
@@ -114,7 +114,7 @@ function CadMockup() {
       </div>
       <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between sm:bottom-4 sm:left-4 sm:right-4">
         <div>
-          <p className="text-[7px] uppercase tracking-widest text-white/60">AutoCAD Ã‚Â· agente inteligente</p>
+          <p className="text-[7px] uppercase tracking-widest text-white/60">AutoCAD · agente inteligente</p>
           <p className="mt-1 text-xs font-semibold text-white">Instrucciones que se convierten en dibujo.</p>
         </div>
         <div className="rounded-full border border-cyan-300/35 bg-cyan-300/15 px-2 py-1 font-mono text-[7px] text-cyan-200 backdrop-blur-md">
@@ -130,7 +130,7 @@ function CommerceMockup() {
     <div className="relative h-full overflow-hidden bg-[#dfe1e5] p-3 text-stone-900">
       <Image
         src="/tenis.jpeg"
-        alt="Tienda en lÃƒÂ­nea de calzado urbano"
+        alt="Tienda en línea de calzado urbano"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="z-10 object-cover object-center transition duration-700 group-hover:scale-105"
@@ -141,7 +141,7 @@ function CommerceMockup() {
       </div>
       <div className="absolute bottom-3 left-3 right-3 z-30 flex items-end justify-between sm:bottom-4 sm:left-4 sm:right-4">
         <div>
-          <p className="text-[7px] uppercase tracking-widest text-white/70">E-commerce Ã‚Â· experiencia de compra</p>
+          <p className="text-[7px] uppercase tracking-widest text-white/70">E-commerce · experiencia de compra</p>
           <p className="mt-1 text-xs font-semibold text-white">Una tienda clara para elegir mejor.</p>
         </div>
         <div className="grid size-8 place-items-center rounded-full bg-white text-black shadow-lg">
@@ -154,7 +154,7 @@ function CommerceMockup() {
       </div>
       <div className="mt-3 grid grid-cols-[1.1fr_.9fr] gap-2">
         <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-orange-200 via-stone-200 to-emerald-200 p-3">
-          <p className="text-[6px] uppercase tracking-widest text-stone-500">Nueva colecciÃƒÂ³n</p>
+          <p className="text-[6px] uppercase tracking-widest text-stone-500">Nueva colección</p>
           <p className="mt-1 max-w-24 text-base font-semibold leading-4 tracking-tight">Calzado urbano con estilo limpio.</p>
           <span className="mt-5 inline-flex rounded-full bg-stone-900 px-2.5 py-1 text-[6px] text-white">Comprar ahora</span>
           <Box className="absolute bottom-2 right-2 size-11 rotate-6 text-stone-800/20" />
@@ -279,7 +279,7 @@ function PhotogrammetryMockup() {
             <PackageCheck className="size-3 text-[#18d38a]" /> Processing
           </div>
           <p className="mt-2 text-[6px] leading-3 text-white/35">
-            Portal para monitorear el procesamiento fotogramÃƒÂ©trico sin perder visibilidad del flujo.
+            Portal para monitorear el procesamiento fotogramétrico sin perder visibilidad del flujo.
           </p>
         </div>
         <div className="rounded-xl border border-white/10 bg-white/[.03] p-2">

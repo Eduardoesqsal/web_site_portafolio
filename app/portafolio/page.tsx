@@ -21,7 +21,7 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <main id="contenido">
-      <div className="fixed left-4 top-4 z-50 sm:left-6 sm:top-6">
+      <div className="fixed right-4 top-4 z-50 sm:right-6 sm:top-6">
         <Button
           asChild
           size="icon"

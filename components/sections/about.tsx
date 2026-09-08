@@ -3,7 +3,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { developmentTypes, specialtyCards } from "@/lib/site-data";
 
-const principles = ["Entender antes de construir", "DiseÃƒÂ±ar para las personas", "Medir el impacto real"];
+const principles = ["Entender antes de construir", "Diseñar para las personas", "Medir el impacto real"];
 
 export function About() {
   return (
@@ -13,12 +13,12 @@ export function About() {
         <div className="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-end lg:gap-20">
           <Reveal>
             <div className="section-kicker">
-              <SectionHeading eyebrow="01 / Sobre mÃƒÂ­" title="Entender el problema. Construir con claridad." />
+              <SectionHeading eyebrow="01 / Sobre mí" title="Entender el problema. Construir con claridad." />
             </div>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="max-w-3xl text-pretty text-2xl font-medium leading-[1.3] tracking-[-0.04em] text-neutral-900 sm:text-3xl lg:text-[2.55rem]">
-Soy desarrollador de software con experiencia construyendo productos full stack y entrenando
+              Soy desarrollador de software con experiencia construyendo productos full stack y entrenando
               inteligencia artificial para resolver problemas
               <span className="mx-2 inline-block -rotate-1 bg-[#18c7d6] px-2 text-white">reales</span>.
             </p>
@@ -42,12 +42,16 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
 
                 <div className="grid flex-1 items-center gap-10 py-10 sm:grid-cols-[1fr_.8fr]">
                   <div>
-                    <p className="font-mono text-[10px] text-[#18c7d6]">01 Ã¢â‚¬â€ FILOSOFÃƒÂA</p>
+                    <p className="font-mono text-[10px] text-[#18c7d6]">01 — FILOSOFÍA</p>
                     <h3 className="mt-4 max-w-md text-3xl font-semibold leading-[1.05] tracking-[-.05em] sm:text-4xl">
-                      Entiendo el contexto antes de elegir una soluciÃƒÂ³n.
+                      Entiendo el contexto antes de elegir una solución.
                     </h3>
                     <p className="mt-5 max-w-md text-sm leading-7 text-white/45">
-                      He llevado proyectos de idea a producciÃƒÂ³n combinando HTML, CSS, JavaScript, React, TypeScript, Next.js, Express, PostgreSQL, Python, FastAPI, Flask y Supabase, con servidores Linux, contenedores en Docker y pipelines de CI/CD (GitHub Actions) para desplegar en AWS con confianza. TambiÃƒÂ©n desarrollo y entreno modelos de inteligencia artificial (computer vision, agentes y LLMs) para aplicarlos a necesidades concretas.
+                      He llevado proyectos de idea a producción combinando HTML, CSS, JavaScript, React, TypeScript,
+                      Next.js, Express, PostgreSQL, Python, FastAPI, Flask y Supabase, con servidores Linux,
+                      contenedores en Docker y pipelines de CI/CD (GitHub Actions) para desplegar en AWS con
+                      confianza. También desarrollo y entreno modelos de inteligencia artificial (computer vision,
+                      agentes y LLMs) para aplicarlos a necesidades concretas.
                     </p>
                   </div>
 
@@ -67,8 +71,12 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
                   </div>
                 </div>
 
-                <a href="#proyectos" className="group inline-flex w-fit items-center gap-2 border-b border-[#18c7d6]/40 pb-1 text-xs font-semibold text-[#18c7d6] transition hover:border-[#18c7d6]">
-                  Verlo en acciÃƒÂ³n <ArrowUpRight className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <a
+                  href="#proyectos"
+                  className="group inline-flex w-fit items-center gap-2 border-b border-[#18c7d6]/40 pb-1 text-xs font-semibold text-[#18c7d6] transition hover:border-[#18c7d6]"
+                >
+                  Verlo en acción
+                  <ArrowUpRight className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </a>
               </div>
             </article>
@@ -82,7 +90,10 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
               </div>
               <ul className="mt-7 space-y-3">
                 {principles.map((item, index) => (
-                  <li key={item} className="group flex items-center gap-3 rounded-xl border border-black/8 bg-[#f4f4ee] p-3.5 text-sm font-medium text-neutral-700 transition hover:translate-x-1 hover:border-black/20 hover:bg-[#18c7d6] hover:text-black">
+                  <li
+                    key={item}
+                    className="group flex items-center gap-3 rounded-xl border border-black/8 bg-[#f4f4ee] p-3.5 text-sm font-medium text-neutral-700 transition hover:translate-x-1 hover:border-black/20 hover:bg-[#18c7d6] hover:text-black"
+                  >
                     <span className="grid size-7 shrink-0 place-items-center rounded-full bg-black text-[8px] font-bold text-white group-hover:rotate-6">
                       0{index + 1}
                     </span>
@@ -100,9 +111,11 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
               <div className="relative z-10">
                 <span className="font-mono text-[9px] uppercase tracking-[.18em] text-white/50">Experiencia aplicada</span>
                 <p className="mt-8 max-w-sm text-xl font-medium leading-snug tracking-tight">
-                  VisiÃƒÂ³n computacional, agentes, Office, AutoCAD y soluciones geoespaciales cuando aportan valor.
+                  Visión computacional, agentes, Office, AutoCAD y soluciones geoespaciales cuando aportan valor.
                 </p>
-                <p className="mt-4 text-xs leading-6 text-white/55">TecnologÃƒÂ­as distintas. Un mismo objetivo: eliminar fricciÃƒÂ³n y desbloquear valor.</p>
+                <p className="mt-4 text-xs leading-6 text-white/55">
+                  Tecnologías distintas. Un mismo objetivo: eliminar fricción y desbloquear valor.
+                </p>
               </div>
             </article>
           </Reveal>
@@ -112,7 +125,7 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
           <Reveal>
             <div className="flex items-end justify-between border-t border-black/10 pt-6">
               <div>
-                <span className="font-mono text-[9px] uppercase tracking-[.18em] text-black/35">CÃƒÂ³mo desarrollo software</span>
+                <span className="font-mono text-[9px] uppercase tracking-[.18em] text-black/35">Cómo desarrollo software</span>
                 <h3 className="mt-3 max-w-xl text-3xl font-semibold tracking-[-.04em] text-neutral-900 sm:text-4xl">
                   Tipos de desarrollo que domino
                 </h3>
@@ -133,7 +146,7 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
                   <h3 className="mt-6 text-lg font-semibold tracking-tight text-neutral-900">{type.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-black/45">{type.description}</p>
                   <div className="mt-5 flex flex-wrap items-center gap-2">
-                    <span className="font-mono text-[9px] uppercase tracking-[.14em] text-black/35">TecnologÃƒÂ­as</span>
+                    <span className="font-mono text-[9px] uppercase tracking-[.14em] text-black/35">Tecnologías</span>
                     {type.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -153,7 +166,7 @@ Soy desarrollador de software con experiencia construyendo productos full stack 
           {specialtyCards.map((card, index) => {
             const Icon = card.icon;
             return (
-              <Reveal key={card.title} delay={index * .06}>
+              <Reveal key={card.title} delay={index * 0.06}>
                 <div className="group flex h-full min-h-56 flex-col rounded-[1.75rem] border border-black/10 bg-[#e9e9e1] p-6 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-[0_24px_60px_rgba(0,0,0,.08)] sm:p-7">
                   <div className="flex items-start justify-between">
                     <div className="grid size-11 place-items-center rounded-full bg-black text-[#18c7d6] transition duration-300 group-hover:rotate-6 group-hover:scale-110">

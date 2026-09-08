@@ -126,19 +126,19 @@ export function Hero() {
             </span>
             Disponible para proyectos selectos
             <span className="hidden h-px w-12 bg-white/15 sm:block" />
-            <span className="hidden text-white/25 sm:block">MÃ©xico Â· Remoto</span>
+            <span className="hidden text-white/25 sm:block">México · Remoto</span>
           </div>
 
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#18c7d6]">
-            {"// full stack Â· ai Â· product Â· geospatial"}
+            {"// full stack · ai · product · geospatial"}
           </p>
           <h1 className="mx-auto max-w-[48rem] text-balance text-[clamp(3.4rem,8.5vw,7.6rem)] font-semibold leading-[.84] tracking-[-0.08em]">
             Desarrollo software para convertir ideas en <span className="relative inline-block text-[#18c7d6]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#18c7d6]/40" /></span>.
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
-            Aporto desarrollo full stack, automatizaciÃ³n, visiÃ³n por computadora y soluciones
+            Aporto desarrollo full stack, automatización, visión por computadora y soluciones
             geoespaciales cuando el proyecto lo necesita. Trabajo para que el producto quede
-            <span className="text-white"> claro, estable y fÃ¡cil de usar.</span>
+            <span className="text-white"> claro, estable y fácil de usar.</span>
           </p>
 
           <div className="mt-8">
@@ -190,7 +190,7 @@ export function Hero() {
             </span>
             <span className="hidden h-3 w-px bg-white/15 sm:block" />
             <span className="inline-flex items-center gap-1.5">
-              <Check className="size-3.5 text-[#18d38a]" /> EspaÃ±ol Â· InglÃ©s bÃ¡sico-intermedio
+              <Check className="size-3.5 text-[#18d38a]" /> Español · Inglés básico-intermedio
             </span>
           </div>
         </motion.div>
@@ -248,7 +248,7 @@ function ProfileImage({
       {photoAvailable ? (
         <Image
           src={siteConfig.profilePhoto}
-          alt={`FotografÃ­a de ${siteConfig.name}`}
+          alt={`Fotografía de ${siteConfig.name}`}
           fill
           priority
           sizes="(max-width: 640px) 68vw, (max-width: 1024px) 360px, 390px"
@@ -316,8 +316,8 @@ function ProfileModal({
             </h2>
             <p className="mt-3 text-sm font-medium text-[#18d38a]">{siteConfig.role}</p>
             <p className="mt-6 text-sm leading-7 text-white/50">
-              Combino ingenierÃ­a y pensamiento de producto para convertir necesidades concretas
-              en experiencias claras y fÃ¡ciles de usar. Trabajo principalmente en web, automatizaciÃ³n,
+              Combino ingeniería y pensamiento de producto para convertir necesidades concretas
+              en experiencias claras y fáciles de usar. Trabajo principalmente en web, automatización,
               IA y soluciones geoespaciales cuando el proyecto lo requiere.
             </p>
             <div className="mt-7 grid grid-cols-2 gap-2">

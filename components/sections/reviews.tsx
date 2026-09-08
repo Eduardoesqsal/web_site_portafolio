@@ -29,16 +29,16 @@ export function Reviews() {
         <Reveal>
           <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-10 lg:flex-row lg:items-end">
             <SectionHeading
-              eyebrow="06 / ReseÃƒÂ±as"
+              eyebrow="06 / Reseñas"
               title="Lo que dicen de trabajar conmigo."
-              description="CrÃƒÂ­ticas honestas sobre proyectos, comunicaciÃƒÂ³n y calidad del trabajo. Tu opiniÃƒÂ³n me ayuda a mejorar."
+              description="Críticas honestas sobre proyectos, comunicación y calidad del trabajo. Tu opinión me ayuda a mejorar."
               invert
             />
             <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.04] px-5 py-4">
               <span className="text-4xl font-semibold tracking-tight text-[#18c7d6]">{average}</span>
               <div>
                 <Stars value={Math.round(Number(average))} />
-                <p className="mt-1 text-[10px] text-white/40">{reviews.length} reseÃƒÂ±as</p>
+                <p className="mt-1 text-[10px] text-white/40">{reviews.length} reseñas</p>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export function Reviews() {
                 <span className="grid size-11 place-items-center rounded-full bg-[#18c7d6] text-black transition group-hover:scale-110">
                   <MessageCircle className="size-5" />
                 </span>
-                <p className="text-xs text-white/45">Tu reseÃƒÂ±a puede aparecer aquÃƒÂ­ despuÃƒÂ©s de enviarla por WhatsApp.</p>
+                <p className="text-xs text-white/45">Tu reseña puede aparecer aquí después de enviarla por WhatsApp.</p>
               </button>
             </div>
           </Reveal>
@@ -87,11 +87,11 @@ export function Reviews() {
                   <span className="size-2 rounded-full bg-[#18d38a]/70" />
                 </div>
                 <p className="font-mono text-[8px] uppercase tracking-[.16em] text-white/35">new.review.request</p>
-                <span className="font-mono text-[8px] text-[#18c7d6]">5 Ã¢Ëœâ€¦ MAX</span>
+                <span className="font-mono text-[8px] text-[#18c7d6]">5 estrellas MAX</span>
               </div>
               <div className="p-5 sm:p-7">
                 <div className="mb-6">
-                  <p className="text-xl font-semibold tracking-tight">Deja tu crÃƒÂ­tica</p>
+                  <p className="text-xl font-semibold tracking-tight">Deja tu crítica</p>
                   <p className="mt-1 text-xs text-white/45">Las estrellas son opcionales pero ayudan. Todo llega por WhatsApp.</p>
                 </div>
                 <ReviewForm />
