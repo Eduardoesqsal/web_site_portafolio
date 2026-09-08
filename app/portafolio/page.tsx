@@ -22,10 +22,15 @@ export default function PortfolioPage() {
   return (
     <main id="contenido">
       <div className="fixed left-4 top-4 z-50 sm:left-6 sm:top-6">
-        <Button asChild size="sm" variant="outline" className="shadow-lg shadow-black/20 backdrop-blur">
+        <Button
+          asChild
+          size="icon"
+          variant="outline"
+          className="size-10 rounded-full shadow-lg shadow-black/20 backdrop-blur"
+        >
           <Link href="/">
-            <ArrowLeft />
-            Volver a {companyConfig.name}
+            <ArrowLeft className="size-4" />
+            <span className="sr-only">Volver a {companyConfig.name}</span>
           </Link>
         </Button>
       </div>
