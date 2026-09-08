@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Eduardo Esquivel Salaszar — Desarrollador de software";
+export const alt = "DEV Eduardo Esquivel Salaszar — Desarrollador de software";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,7 +13,7 @@ export default function OpenGraphImage() {
         display: "flex",
         position: "relative",
         overflow: "hidden",
-        background: "#101412",
+        background: "#07131d",
         color: "white",
         padding: "76px",
         fontFamily: "Arial, sans-serif",
@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
           width: 600,
           height: 600,
           borderRadius: 999,
-          background: "rgba(16,185,129,.18)",
+          background: "rgba(24,199,214,.2)",
           filter: "blur(100px)",
           right: -160,
           top: -240,
@@ -52,17 +52,17 @@ export default function OpenGraphImage() {
               justifyContent: "center",
               borderRadius: 16,
               background: "#fff",
-              color: "#101412",
+              color: "#07131d",
               fontWeight: 800,
               fontSize: 18,
             }}
           >
-            EES
+            DEV
           </div>
-          <div style={{ fontSize: 24, fontWeight: 700 }}>Eduardo Esquivel Salaszar</div>
+          <div style={{ fontSize: 24, fontWeight: 700 }}>DEV Eduardo Esquivel Salaszar</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", color: "#6ee7b7", fontSize: 19, fontWeight: 700, letterSpacing: 2 }}>
+          <div style={{ display: "flex", color: "#18c7d6", fontSize: 19, fontWeight: 700, letterSpacing: 2 }}>
             DESARROLLADOR DE SOFTWARE
           </div>
           <div style={{ marginTop: 22, maxWidth: 900, fontSize: 72, fontWeight: 700, lineHeight: 0.98, letterSpacing: -4 }}>

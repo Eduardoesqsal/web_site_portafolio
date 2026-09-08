@@ -21,10 +21,10 @@ export function SectionHeading({
         className={cn(
           "mb-5 flex items-center gap-3 font-mono text-[9px] font-bold uppercase tracking-[0.2em]",
           align === "center" && "justify-center",
-          invert ? "text-[#b8ff3d]" : "text-[#5f8a19]",
+          invert ? "text-[#18c7d6]" : "text-[#0e8e9a]",
         )}
       >
-        <span className={cn("size-1.5 rounded-full", invert ? "bg-[#b8ff3d]" : "bg-[#73a824]")} />
+        <span className={cn("size-1.5 rounded-full", invert ? "bg-[#18c7d6]" : "bg-[#18d38a]")} />
         {eyebrow}
       </div>
       <h2

@@ -6,7 +6,7 @@ import { experiences } from "@/lib/site-data";
 export function Experience() {
   return (
     <section id="experiencia" className="section-space relative overflow-hidden bg-white">
-      <div className="absolute -left-32 top-28 size-80 rounded-full bg-violet-100 blur-[100px]" />
+      <div className="absolute -left-32 top-28 size-80 rounded-full bg-[#eef7f8] blur-[100px]" />
       <div className="container-site relative">
         <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
           <Reveal>
@@ -14,15 +14,15 @@ export function Experience() {
               <SectionHeading
                 eyebrow="04 / Experiencia"
                 title="Aprender haciendo. Mejorar lanzando."
-                description="Una trayectoria en la intersección entre software, datos e inteligencia artificial aplicada."
+                description="Una trayectoria en la intersecciÃƒÂ³n entre software, datos e inteligencia artificial aplicada."
               />
-              <div className="mt-9 rounded-[1.75rem] bg-[#b8ff3d] p-6">
+              <div className="mt-9 rounded-[1.75rem] bg-[#18c7d6] p-6">
                 <div className="flex items-start justify-between">
-                  <span className="grid size-11 place-items-center rounded-full bg-black text-[#b8ff3d]"><GraduationCap className="size-5" /></span>
+                  <span className="grid size-11 place-items-center rounded-full bg-black text-[#18c7d6]"><GraduationCap className="size-5" /></span>
                   <ArrowUpRight className="size-4 text-black/30" />
                 </div>
-                <p className="mt-10 text-xl font-semibold leading-tight tracking-tight">La curiosidad también forma parte del stack.</p>
-                <p className="mt-3 text-xs leading-6 text-black/55">Formación continua en arquitectura de software, IA, producto y herramientas espaciales cuando el proyecto lo necesita.</p>
+                <p className="mt-10 text-xl font-semibold leading-tight tracking-tight">La curiosidad tambiÃƒÂ©n forma parte del stack.</p>
+                <p className="mt-3 text-xs leading-6 text-black/55">FormaciÃƒÂ³n continua en arquitectura de software, IA, producto y herramientas espaciales cuando el proyecto lo necesita.</p>
               </div>
             </div>
           </Reveal>
@@ -32,13 +32,13 @@ export function Experience() {
             {experiences.map((experience, index) => (
               <Reveal key={`${experience.period}-${experience.role}`} delay={index * .08}>
                 <article className="group relative grid grid-cols-[48px_1fr] gap-4 pb-5 last:pb-0 sm:grid-cols-[56px_1fr] sm:gap-6">
-                  <div className="relative z-10 grid size-12 place-items-center rounded-full border border-black/10 bg-white text-black/35 shadow-sm transition duration-300 group-hover:border-black group-hover:bg-black group-hover:text-[#b8ff3d] sm:size-14">
+                  <div className="relative z-10 grid size-12 place-items-center rounded-full border border-black/10 bg-white text-black/35 shadow-sm transition duration-300 group-hover:border-black group-hover:bg-black group-hover:text-[#18c7d6] sm:size-14">
                     <BriefcaseBusiness className="size-4" />
                   </div>
                   <div className="rounded-[1.75rem] border border-black/10 bg-[#f4f4ee] p-5 transition duration-500 group-hover:-translate-y-1 group-hover:border-black/20 group-hover:bg-white group-hover:shadow-[0_24px_60px_rgba(0,0,0,.08)] sm:p-7">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                       <div>
-                        <p className="font-mono text-[9px] uppercase tracking-[.16em] text-violet-600">{experience.company}</p>
+                        <p className="font-mono text-[9px] uppercase tracking-[.16em] text-[#0e8e9a]">{experience.company}</p>
                         <h3 className="mt-2 text-xl font-semibold tracking-[-.035em] sm:text-2xl">{experience.role}</h3>
                       </div>
                       <span className="shrink-0 rounded-full border border-black/10 bg-white px-3 py-1.5 font-mono text-[8px] text-black/45">{experience.period}</span>
@@ -47,7 +47,7 @@ export function Experience() {
                     <ul className="mt-5 flex flex-wrap gap-2">
                       {experience.highlights.map((highlight) => (
                         <li key={highlight} className="inline-flex items-center gap-1.5 rounded-full bg-black px-2.5 py-1.5 font-mono text-[8px] text-white/65">
-                          <Check className="size-3 text-[#b8ff3d]" /> {highlight}
+                          <Check className="size-3 text-[#18c7d6]" /> {highlight}
                         </li>
                       ))}
                     </ul>

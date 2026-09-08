@@ -13,9 +13,9 @@ export function Projects() {
             <SectionHeading
               eyebrow="03 / Trabajo seleccionado"
               title="Proyectos desarrollados para necesidades concretas."
-              description="Sistemas diseñados alrededor de una necesidad concreta: producto, automatización, interfaces y agentes que ejecutan trabajo real."
+              description="Sistemas diseÃƒÂ±ados alrededor de una necesidad concreta: producto, automatizaciÃƒÂ³n, interfaces y agentes que ejecutan trabajo real."
             />
-            <a href="#contacto" className="focus-ring group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-xs font-semibold text-white transition hover:bg-violet-600 md:self-auto">
+            <a href="#contacto" className="focus-ring group inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-5 py-3 text-xs font-semibold text-white transition hover:bg-[linear-gradient(145deg,#0f1d27_0%,#123140_45%,#08302c_100%)] md:self-auto">
               Tengo un reto <ArrowUpRight className="size-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
           </div>
@@ -30,32 +30,32 @@ export function Projects() {
                     <ProjectVisual type={project.visual} />
                   </div>
                   <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/65 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[.14em] text-white backdrop-blur-md">
-                    <span className="size-1.5 rounded-full bg-[#b8ff3d]" /> Project / 0{index + 1}
+                    <span className="size-1.5 rounded-full bg-[#18c7d6]" /> Project / 0{index + 1}
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6 sm:p-8">
                   <div className="flex items-start justify-between gap-5">
                     <div>
-                      <p className="font-mono text-[8px] uppercase tracking-[.16em] text-violet-600">{project.category}</p>
+                      <p className="font-mono text-[8px] uppercase tracking-[.16em] text-[#0e8e9a]">{project.category}</p>
                       <h3 className="mt-2 text-2xl font-semibold tracking-[-0.04em] sm:text-[1.7rem]">{project.name}</h3>
                     </div>
-                    <a href={project.demoUrl} className="grid size-11 shrink-0 place-items-center rounded-full border border-black/10 bg-[#f4f4ee] transition group-hover:rotate-6 group-hover:border-black group-hover:bg-[#b8ff3d]" aria-label={`Ver ${project.name}`}>
+                    <a href={project.demoUrl} className="grid size-11 shrink-0 place-items-center rounded-full border border-black/10 bg-[#f4f4ee] transition group-hover:rotate-6 group-hover:border-black group-hover:bg-[#18c7d6]" aria-label={`Ver ${project.name}`}>
                       <ArrowUpRight className="size-4" />
                     </a>
                   </div>
 
                   <p className="mt-4 text-sm leading-6 text-black/50">{project.description}</p>
                   {project.confidential ? (
-                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-violet-500 bg-violet-50 px-4 py-3">
-                      <Lock className="mt-0.5 size-3.5 shrink-0 text-violet-600" />
+                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#18c7d6] bg-[#eef7f8] px-4 py-3">
+                      <Lock className="mt-0.5 size-3.5 shrink-0 text-[#0e8e9a]" />
                       <p className="text-[11px] leading-5 text-black/50">
-                        Proyecto confidencial. Por política del cliente solo comparto imágenes y
-                        videos de referencia; el código y los datos internos no son públicos.
+                        Proyecto confidencial. Por polÃƒÂ­tica del cliente solo comparto imÃƒÂ¡genes y
+                        videos de referencia; el cÃƒÂ³digo y los datos internos no son pÃƒÂºblicos.
                       </p>
                     </div>
                   ) : (
-                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#b8ff3d] bg-[#f4f4ee] px-4 py-3">
+                    <div className="mt-5 flex items-start gap-2.5 border-l-2 border-[#18c7d6] bg-[#f4f4ee] px-4 py-3">
                       <Lightbulb className="mt-0.5 size-3.5 shrink-0 text-black" />
                       <p className="text-[11px] leading-5 text-black/50">{project.problem}</p>
                     </div>

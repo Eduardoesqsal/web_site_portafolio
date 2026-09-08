@@ -52,8 +52,8 @@ export function Hero() {
       className="hero-surface noise relative isolate min-h-screen overflow-hidden pt-28 text-white sm:pt-32"
     >
       <div className="hero-grid absolute inset-0 -z-20 opacity-70" />
-      <div className="absolute -left-40 top-10 -z-10 size-[34rem] rounded-full bg-[#b8ff3d]/8 blur-[120px]" />
-      <div className="absolute -right-40 top-28 -z-10 size-[38rem] rounded-full bg-[#b8ff3d]/10 blur-[130px]" />
+      <div className="absolute -left-40 top-10 -z-10 size-[34rem] rounded-full bg-[#18c7d6]/8 blur-[120px]" />
+      <div className="absolute -right-40 top-28 -z-10 size-[38rem] rounded-full bg-[#18d38a]/10 blur-[130px]" />
       <div className="absolute left-[58%] top-[14%] -z-10 h-[28rem] w-px rotate-[28deg] bg-gradient-to-b from-transparent via-white/15 to-transparent" />
 
       <div className="container-site flex min-h-[calc(100vh-8rem)] flex-col items-center gap-10 pb-12 pt-8 text-center lg:gap-12 lg:pb-16 lg:pt-10">
@@ -69,18 +69,18 @@ export function Hero() {
             transition={{ duration: 42, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
           />
           <motion.div
-            className="absolute inset-[10%] rounded-full border border-[#b8ff3d]/30"
+            className="absolute inset-[10%] rounded-full border border-[#18c7d6]/30"
             animate={reduceMotion ? undefined : { rotate: -360 }}
             transition={{ duration: 34, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
           >
-            <span className="absolute left-1/2 top-0 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#b8ff3d] shadow-[0_0_20px_#b8ff3d]" />
-            <span className="absolute bottom-[8%] right-[11%] size-2 rounded-full bg-violet-400 shadow-[0_0_18px_#a78bfa]" />
+            <span className="absolute left-1/2 top-0 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#18c7d6] shadow-[0_0_20px_#18c7d6]" />
+            <span className="absolute bottom-[8%] right-[11%] size-2 rounded-full bg-[#18d38a] shadow-[0_0_18px_#18d38a]" />
           </motion.div>
-          <div className="absolute inset-[17%] rounded-full bg-gradient-to-br from-[#b8ff3d] via-white/80 to-violet-500 p-[3px] shadow-[0_0_90px_rgba(184,255,61,.12)]">
+          <div className="absolute inset-[17%] rounded-full bg-gradient-to-br from-[#18c7d6] via-white/80 to-[#18d38a] p-[3px] shadow-[0_0_90px_rgba(24,199,214,.12)]">
             <motion.button
               type="button"
               layoutId="profile-orb"
-              className="group noise relative size-full cursor-zoom-in overflow-hidden rounded-full border-[8px] border-[#101210] bg-[#151815] text-left outline-none focus-visible:ring-4 focus-visible:ring-[#b8ff3d]/60"
+              className="group noise relative size-full cursor-zoom-in overflow-hidden rounded-full border-[8px] border-[#101d28] bg-[#0f1d27] text-left outline-none focus-visible:ring-4 focus-visible:ring-[#18c7d6]/60"
               onClick={() => setProfileOpen(true)}
               whileHover={reduceMotion ? undefined : { scale: 0.985 }}
               aria-label="Abrir perfil de Eduardo"
@@ -100,7 +100,7 @@ export function Hero() {
               animate={reduceMotion ? undefined : { y: [0, -7, 0] }}
               transition={{ duration: 4.5 + delay, delay, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
-              <span className="grid size-9 place-items-center rounded-full bg-white/8 text-[#b8ff3d]">
+              <span className="grid size-9 place-items-center rounded-full bg-white/8 text-[#18c7d6]">
                 <Icon className="size-4" />
               </span>
               <span className="font-mono text-[9px] font-bold uppercase tracking-wider text-white/75">{label}</span>
@@ -108,7 +108,7 @@ export function Hero() {
           ))}
 
           <div className="absolute bottom-[1%] left-[15%] z-20 rounded-full border border-white/15 bg-white px-4 py-2.5 text-[10px] font-semibold text-black shadow-[0_18px_45px_rgba(0,0,0,.35)]">
-            <span className="mr-2 inline-block size-1.5 rounded-full bg-emerald-500" />
+            <span className="mr-2 inline-block size-1.5 rounded-full bg-[#18d38a]" />
             Systems online
           </div>
         </motion.div>
@@ -121,24 +121,24 @@ export function Hero() {
         >
           <div className="mb-7 flex items-center justify-center gap-3 text-[10px] font-semibold uppercase tracking-[.2em] text-white/45">
             <span className="relative flex size-2.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#b8ff3d] opacity-60" />
-              <span className="relative inline-flex size-2.5 rounded-full bg-[#b8ff3d]" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#18c7d6] opacity-60" />
+              <span className="relative inline-flex size-2.5 rounded-full bg-[#18c7d6]" />
             </span>
             Disponible para proyectos selectos
             <span className="hidden h-px w-12 bg-white/15 sm:block" />
-            <span className="hidden text-white/25 sm:block">México · Remoto</span>
+            <span className="hidden text-white/25 sm:block">MÃ©xico Â· Remoto</span>
           </div>
 
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#b8ff3d]">
-            {"// full stack · ai · product · geospatial"}
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[.18em] text-[#18c7d6]">
+            {"// full stack Â· ai Â· product Â· geospatial"}
           </p>
           <h1 className="mx-auto max-w-[48rem] text-balance text-[clamp(3.4rem,8.5vw,7.6rem)] font-semibold leading-[.84] tracking-[-0.08em]">
-            Desarrollo software para convertir ideas en <span className="relative inline-block text-[#b8ff3d]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#b8ff3d]/40" /></span>.
+            Desarrollo software para convertir ideas en <span className="relative inline-block text-[#18c7d6]">productos funcionales<span className="absolute -bottom-2 left-0 h-1 w-2/3 rounded-full bg-[#18c7d6]/40" /></span>.
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-7 text-white/55 sm:text-lg sm:leading-8">
-            Aporto desarrollo full stack, automatización, visión por computadora y soluciones
+            Aporto desarrollo full stack, automatizaciÃ³n, visiÃ³n por computadora y soluciones
             geoespaciales cuando el proyecto lo necesita. Trabajo para que el producto quede
-            <span className="text-white"> claro, estable y fácil de usar.</span>
+            <span className="text-white"> claro, estable y fÃ¡cil de usar.</span>
           </p>
 
           <div className="mt-8">
@@ -185,12 +185,12 @@ export function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/35">
             <span className="inline-flex items-center gap-1.5">
-              <MapPin className="size-3.5 text-[#b8ff3d]" />
+              <MapPin className="size-3.5 text-[#18c7d6]" />
               {siteConfig.location}
             </span>
             <span className="hidden h-3 w-px bg-white/15 sm:block" />
             <span className="inline-flex items-center gap-1.5">
-              <Check className="size-3.5 text-[#b8ff3d]" /> Español · Inglés básico-intermedio
+              <Check className="size-3.5 text-[#18d38a]" /> EspaÃ±ol Â· InglÃ©s bÃ¡sico-intermedio
             </span>
           </div>
         </motion.div>
@@ -200,7 +200,7 @@ export function Hero() {
         <div className="grid gap-5 sm:grid-cols-3">
           {stats.map((stat, index) => (
             <div key={stat.value} className="flex items-center gap-4 sm:justify-center sm:border-r sm:border-white/10 last:border-0">
-              <span className="font-mono text-[9px] text-[#b8ff3d]">0{index + 1}</span>
+              <span className="font-mono text-[9px] text-[#18c7d6]">0{index + 1}</span>
               <div>
                 <p className="text-sm font-semibold tracking-tight text-white">{stat.value}</p>
                 <p className="mt-0.5 text-[10px] text-white/35">{stat.label}</p>
@@ -212,7 +212,7 @@ export function Hero() {
 
       <a
         href="#sobre-mi"
-        className="absolute bottom-4 right-6 hidden items-center gap-2 font-mono text-[9px] uppercase tracking-widest text-white/30 transition hover:text-[#b8ff3d] xl:flex"
+        className="absolute bottom-4 right-6 hidden items-center gap-2 font-mono text-[9px] uppercase tracking-widest text-white/30 transition hover:text-[#18c7d6] xl:flex"
       >
         Scroll to explore <ArrowDown className="size-3.5 animate-bounce" />
       </a>
@@ -240,7 +240,7 @@ function ProfileImage({
   return (
     <>
       <div className="absolute inset-0 grid place-items-center overflow-hidden bg-[radial-gradient(circle_at_50%_25%,#3b4434_0%,#191d18_48%,#0d0f0d_100%)]">
-        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(184,255,61,.15)_1px,transparent_1px),linear-gradient(90deg,rgba(184,255,61,.15)_1px,transparent_1px)] [background-size:28px_28px]" />
+        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(24,199,214,.15)_1px,transparent_1px),linear-gradient(90deg,rgba(24,199,214,.15)_1px,transparent_1px)] [background-size:28px_28px]" />
         <span className="relative text-7xl font-semibold tracking-[-0.1em] text-white/20 sm:text-8xl">
           {siteConfig.shortName}
         </span>
@@ -248,7 +248,7 @@ function ProfileImage({
       {photoAvailable ? (
         <Image
           src={siteConfig.profilePhoto}
-          alt={`Fotografía de ${siteConfig.name}`}
+          alt={`FotografÃ­a de ${siteConfig.name}`}
           fill
           priority
           sizes="(max-width: 640px) 68vw, (max-width: 1024px) 360px, 390px"
@@ -283,7 +283,7 @@ function ProfileModal({
       aria-labelledby="profile-title"
     >
       <motion.div
-        className="relative my-auto w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/15 bg-[#111311] shadow-[0_40px_120px_rgba(0,0,0,.7)]"
+          className="relative my-auto w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/15 bg-[#0f1d27] shadow-[0_40px_120px_rgba(0,0,0,.7)]"
         initial={{ opacity: 0, y: 30, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 20, scale: 0.97 }}
@@ -292,32 +292,32 @@ function ProfileModal({
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 grid size-10 place-items-center rounded-full border border-white/10 bg-black/40 text-white/60 backdrop-blur transition hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-[#b8ff3d]"
+          className="absolute right-4 top-4 z-20 grid size-10 place-items-center rounded-full border border-white/10 bg-black/40 text-white/60 backdrop-blur transition hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-[#18c7d6]"
           aria-label="Cerrar perfil"
           autoFocus
         >
           <X className="size-4" />
         </button>
         <div className="grid md:grid-cols-[.8fr_1.2fr]">
-          <div className="relative min-h-80 overflow-hidden bg-[#191d18] md:min-h-[31rem]">
+          <div className="relative min-h-80 overflow-hidden bg-[#101f29] md:min-h-[31rem]">
             <ProfileImage photoAvailable={photoAvailable} setPhotoAvailable={setPhotoAvailable} />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <p className="font-mono text-[9px] uppercase tracking-[.18em] text-[#b8ff3d]">Currently building</p>
+              <p className="font-mono text-[9px] uppercase tracking-[.18em] text-[#18c7d6]">Currently building</p>
               <p className="mt-2 text-sm font-medium text-white">Software que conecta datos con decisiones.</p>
             </div>
           </div>
           <div className="flex flex-col p-7 sm:p-9">
             <div className="mb-8 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[.18em] text-white/35">
-              <span className="size-1.5 rounded-full bg-[#b8ff3d]" /> Profile / 001
+              <span className="size-1.5 rounded-full bg-[#18c7d6]" /> Profile / 001
             </div>
             <h2 id="profile-title" className="text-3xl font-semibold leading-none tracking-[-.05em] sm:text-4xl">
               {siteConfig.name}
             </h2>
-            <p className="mt-3 text-sm font-medium text-[#b8ff3d]">{siteConfig.role}</p>
+            <p className="mt-3 text-sm font-medium text-[#18d38a]">{siteConfig.role}</p>
             <p className="mt-6 text-sm leading-7 text-white/50">
-              Combino ingeniería y pensamiento de producto para convertir necesidades concretas
-              en experiencias claras y fáciles de usar. Trabajo principalmente en web, automatización,
+              Combino ingenierÃ­a y pensamiento de producto para convertir necesidades concretas
+              en experiencias claras y fÃ¡ciles de usar. Trabajo principalmente en web, automatizaciÃ³n,
               IA y soluciones geoespaciales cuando el proyecto lo requiere.
             </p>
             <div className="mt-7 grid grid-cols-2 gap-2">
@@ -326,7 +326,7 @@ function ProfileModal({
                   key={item}
                   className="rounded-xl border border-white/10 bg-white/[.035] px-3 py-3 text-[10px] font-medium text-white/60"
                 >
-                  <Sparkles className="mb-2 size-3.5 text-[#b8ff3d]" /> {item}
+                  <Sparkles className="mb-2 size-3.5 text-[#18c7d6]" /> {item}
                 </div>
               ))}
             </div>

@@ -47,21 +47,21 @@ export function ContactForm() {
             name="projectType"
             defaultValue=""
             required
-            className="h-12 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 text-sm text-neutral-700 shadow-sm outline-none transition hover:border-neutral-300 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
+            className="h-12 w-full appearance-none rounded-xl border border-neutral-200 bg-white px-4 text-sm text-neutral-700 shadow-sm outline-none transition hover:border-neutral-300 focus:border-[#18c7d6] focus:ring-4 focus:ring-[#18c7d6]/10"
           >
             <option value="" disabled>
-              Selecciona una opción
+              Selecciona una opciÃƒÂ³n
             </option>
-            <option>Aplicación web</option>
+            <option>AplicaciÃƒÂ³n web</option>
             <option>Datos espaciales</option>
             <option>IA / Computer Vision</option>
-            <option>Agente y automatización</option>
+            <option>Agente y automatizaciÃƒÂ³n</option>
             <option>API / Backend</option>
             <option>Otro</option>
           </select>
         </Field>
       </div>
-      <Field label="Cuéntame sobre el reto" htmlFor="message">
+      <Field label="CuÃƒÂ©ntame sobre el reto" htmlFor="message">
         <Textarea
           id="message"
           name="message"
@@ -78,7 +78,7 @@ export function ContactForm() {
 
       <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xs text-[10px] leading-4 text-neutral-400">
-          Se abrirá WhatsApp con tu mensaje listo para enviar. Sin costo para ti.
+          Se abrirÃƒÂ¡ WhatsApp con tu mensaje listo para enviar. Sin costo para ti.
         </p>
         <Button type="submit" size="lg" className="sm:min-w-40">
           <MessageCircle /> Enviar por WhatsApp
@@ -93,10 +93,10 @@ export function ContactForm() {
               initial={reduceMotion ? false : { opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               exit={reduceMotion ? undefined : { opacity: 0 }}
-              className="flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2.5 text-xs text-emerald-800"
+              className="flex items-center gap-2 rounded-xl bg-[#eef7f8] px-3 py-2.5 text-xs text-[#0d1d28]"
               role="status"
             >
-              <CheckCircle2 className="size-4" /> Listo. Se abrió WhatsApp con tu mensaje preparado.
+              <CheckCircle2 className="size-4" /> Listo. Se abriÃƒÂ³ WhatsApp con tu mensaje preparado.
             </motion.div>
           ) : null}
         </AnimatePresence>

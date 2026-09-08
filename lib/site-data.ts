@@ -1,20 +1,13 @@
 import {
   Blocks,
-  Bot,
   Braces,
   BrainCircuit,
-  ChartNoAxesCombined,
   CloudCog,
   CodeXml,
-  Database,
-  DraftingCompass,
   Globe2,
-  Layers3,
   Map,
   ServerCog,
-  ShoppingBag,
   Sparkles,
-  Workflow,
 } from "lucide-react";
 import type {
   DevelopmentType,
@@ -27,8 +20,8 @@ import type {
 } from "@/types";
 
 export const siteConfig = {
-  name: "Eduardo Esquivel Salaszar",
-  shortName: "EES",
+  name: "DEV Eduardo Esquivel Salaszar",
+  shortName: "DEV",
   role: "Desarrollador de software",
   profilePhoto: "/edwin.jpeg",
   description:
@@ -41,6 +34,7 @@ export const siteConfig = {
     "https://www.linkedin.com/in/eduardo-salazar-89b805225?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   whatsapp: "https://wa.me/524272989094",
   whatsappLabel: "+52 427 298 9094",
+  instagramHref: "https://instagram.com/eduardoesqsal",
 } as const;
 
 export const navigation: NavItem[] = [
@@ -223,42 +217,37 @@ export const experiences: Experience[] = [
 export const services: Service[] = [
   {
     title: "Productos web",
-    description: "Aplicaciones y plataformas completas, desde estrategia y UX hasta producción.",
+    description: "Plataformas completas, desde estrategia y UX hasta despliegue en producción.",
     icon: CodeXml,
   },
   {
-    title: "APIs & Backend",
+    title: "Frontend",
+    description: "Interfaces rápidas, responsivas y cuidadas para que la experiencia se sienta sólida.",
+    icon: Braces,
+  },
+  {
+    title: "Backend & APIs",
     description: "Servicios robustos, integraciones y arquitecturas preparadas para escalar.",
     icon: ServerCog,
   },
   {
-    title: "Datos espaciales",
-    description: "Mapas, PostGIS y análisis espacial cuando aportan valor al producto.",
+    title: "Móvil Android",
+    description: "Aplicaciones móviles Android pensadas para operación, usuarios finales y crecimiento.",
+    icon: Globe2,
+  },
+  {
+    title: "Ciencia de datos",
+    description: "Análisis, visualización y decisiones guiadas por datos útiles para negocio.",
     icon: Map,
   },
   {
-    title: "Inteligencia Artificial",
-    description: "Modelos a medida, visión por computadora y entrenamiento con datos propios.",
+    title: "IA y automatización",
+    description: "Modelos a medida, visión por computadora y automatización con agentes.",
     icon: BrainCircuit,
   },
   {
-    title: "Agentes & automatización",
-    description: "Agentes que conectan IA con Excel, AutoCAD, Office y procesos internos.",
-    icon: Bot,
-  },
-  {
-    title: "Dashboards de datos",
-    description: "Información compleja convertida en interfaces claras para decidir más rápido.",
-    icon: ChartNoAxesCombined,
-  },
-  {
-    title: "Frontend",
-    description: "Interfaces React accesibles, responsivas y optimizadas para conversión.",
-    icon: Braces,
-  },
-  {
     title: "Cloud & DevOps",
-    description: "Servidores Linux, contenedores Docker, pipelines de CI/CD y despliegues en AWS para entregar con confianza.",
+    description: "Servidores Linux, contenedores Docker, CI/CD y despliegues para entregar con confianza.",
     icon: CloudCog,
   },
 ];
@@ -340,11 +329,3 @@ export const reviews: Review[] = [
     text: "Tomó un proceso técnico complejo (ortomosaicos y análisis espacial) y lo convirtió en una herramienta clara. Sabía exactamente qué preguntar para despejar el camino.",
   },
 ];
-
-export const capabilityIcons = [
-  DraftingCompass,
-  ShoppingBag,
-  Layers3,
-  Database,
-  Workflow,
-] as const;

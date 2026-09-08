@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUp, Github, Linkedin, MessageCircle } from "lucide-react";
 import { navigation, siteConfig } from "@/lib/site-data";
 
@@ -8,8 +9,8 @@ export function Footer() {
         <div className="flex flex-col gap-8 border-b border-white/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <a href="#inicio" className="inline-flex items-center gap-3">
-              <span className="grid size-10 place-items-center rounded-xl bg-white text-xs font-bold text-neutral-950">
-                {siteConfig.shortName}
+              <span className="grid size-10 place-items-center overflow-hidden rounded-full border border-white/10 bg-white/95 shadow-[0_10px_30px_rgba(0,0,0,.2)]">
+                <Image src="/logo.png" alt="Dev Technology" width={40} height={40} className="size-full object-cover" />
               </span>
               <span className="text-base font-semibold">{siteConfig.name}</span>
             </a>
