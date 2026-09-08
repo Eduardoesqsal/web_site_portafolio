@@ -37,7 +37,7 @@ export function createCvPdf() {
     text(10, 42, 276, "Backend y datos", 0.12),
     text(9, 42, 260, "Python | FastAPI | Flask | Express.js | PostgreSQL | PostGIS", 0.4),
     text(10, 42, 232, "Geoespacial e inteligencia artificial", 0.12),
-    text(9, 42, 216, "Leaflet | OpenLayers | Metashape | YOLO | Segmentacion | Agentes", 0.4),
+    text(9, 42, 216, "Leaflet | OpenLayers | YOLO | Segmentacion | Agentes", 0.4),
     text(10, 42, 188, "Herramientas", 0.12),
     text(9, 42, 172, "Git | GitHub | Docker | Supabase | Vercel", 0.4),
     text(14, 42, 125, "ESPECIALIDADES"),

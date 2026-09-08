@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Boxes, CloudCog, GitBranch, Github, Rocket, Workflow } from "lucide-react";
+import { Boxes, CloudCog, GitBranch, Github, Rocket, Workflow } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";

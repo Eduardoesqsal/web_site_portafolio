@@ -91,8 +91,8 @@ export const techCategories: TechCategory[] = [
     technologies: [
       { name: "Leaflet", short: "Lf" },
       { name: "OpenLayers", short: "OL" },
-      { name: "Ortomosaicos", short: "Or" },
-      { name: "Metashape API", short: "Ag" },
+      { name: "QGIS", short: "Qg" },
+      { name: "PostGIS", short: "Pg" },
       { name: "IDE", short: "IDE" },
     ],
   },
@@ -150,9 +150,9 @@ export const projects: Project[] = [
   },
   {
     name: "GeoField App",
-    category: "Geoportal / ortomosaicos",
+    category: "Geoportal geoespacial",
     description:
-      "Geoportal para análisis de ortomosaicos con backend propio y entrenamiento de algoritmos de visión por computadora. Proyecto confidencial: comparto imágenes y videos de referencia, el código interno no es público.",
+      "Geoportal para visualización espacial con backend propio y entrenamiento de algoritmos de visión por computadora. Proyecto confidencial: comparto imágenes y videos de referencia, el código interno no es público.",
     problem:
       "Transforma imágenes aéreas en información útil para análisis técnico y toma de decisiones.",
     technologies: ["Python", "PostGIS", "FastAPI", "OpenLayers", "Computer Vision"],
@@ -298,8 +298,8 @@ export const developmentTypes: DevelopmentType[] = [
   {
     title: "Desarrollo de software geoespacial",
     description:
-      "Integro mapas, análisis espacial y ortomosaicos dentro del producto para dar contexto territorial a las decisiones.",
-    technologies: ["PostGIS", "Leaflet", "OpenLayers", "Ortomosaicos", "Metashape API", "IDE", "QGIS"],
+      "Integro mapas y análisis espacial dentro del producto para dar contexto territorial a las decisiones.",
+    technologies: ["PostGIS", "Leaflet", "OpenLayers", "QGIS", "IDE"],
   },
   {
     title: "De páginas estáticas a aplicaciones web",
@@ -326,6 +326,6 @@ export const reviews: Review[] = [
     name: "Ana L.",
     role: "Operaciones · Geoportal",
     rating: 5,
-    text: "Tomó un proceso técnico complejo (ortomosaicos y análisis espacial) y lo convirtió en una herramienta clara. Sabía exactamente qué preguntar para despejar el camino.",
+    text: "Tomó un proceso técnico complejo de análisis espacial y lo convirtió en una herramienta clara. Sabía exactamente qué preguntar para despejar el camino.",
   },
 ];
