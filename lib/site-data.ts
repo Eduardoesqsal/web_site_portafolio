@@ -335,9 +335,9 @@ export const developmentTypes: DevelopmentType[] = [
     technologies: ["PostGIS", "Leaflet", "OpenLayers", "QGIS", "IDE"],
   },
   {
-    title: "Desarrollo de software móil Android",
+    title: "Desarrollo de software móvil Android",
     description:
-      "Construyo apps móiles nativas en Kotlin con Android Studio, desde la interfaz hasta el GPS en tiempo real, con un backend propio en FastAPI y Supabase.",
+      "Construyo apps móviles nativas en Kotlin con Android Studio, desde la interfaz hasta el GPS en tiempo real, con un backend propio en FastAPI y Supabase.",
     technologies: ["Kotlin", "Android Studio", "Jetpack Compose", "MVVM", "Room", "Google Maps", "Supabase", "FastAPI"],
   },
   {
