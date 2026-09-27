@@ -337,7 +337,7 @@ export const developmentTypes: DevelopmentType[] = [
   {
     title: "Desarrollo de software móil Android",
     description:
-      "Construyo apps móiles nativas en Kotlin con Android Studio, desde la interfaz hasta el GPS en tiempo real, conectadas con Supabase y FastAPI.",
+      "Construyo apps móiles nativas en Kotlin con Android Studio, desde la interfaz hasta el GPS en tiempo real, con un backend propio en FastAPI y Supabase.",
     technologies: ["Kotlin", "Android Studio", "Jetpack Compose", "MVVM", "Room", "Google Maps", "Supabase", "FastAPI"],
   },
   {
