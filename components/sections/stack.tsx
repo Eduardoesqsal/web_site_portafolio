@@ -6,13 +6,14 @@ import {
   Database,
   Map,
   ServerCog,
+  Smartphone,
   Sparkles,
 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { techCategories } from "@/lib/site-data";
 
-const categoryIcons = [Code2, ServerCog, Database, Map, BrainCircuit, CloudCog];
+const categoryIcons = [Code2, ServerCog, Database, Map, Smartphone, BrainCircuit, CloudCog];
 
 export function Stack() {
   const allTechnologies = techCategories.flatMap((category) => category.technologies);

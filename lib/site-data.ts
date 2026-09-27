@@ -97,6 +97,18 @@ export const techCategories: TechCategory[] = [
     ],
   },
   {
+    name: "Móvil Android",
+    description: "Aplicaciones nativas en Kotlin con seguimiento por ubicación y backend en tiempo real.",
+    technologies: [
+      { name: "Kotlin", short: "Kt" },
+      { name: "Android Studio", short: "AS" },
+      { name: "Jetpack Compose", short: "Jc" },
+      { name: "Room", short: "Rm" },
+      { name: "MVVM", short: "MV" },
+      { name: "Google Maps", short: "GM" },
+    ],
+  },
+  {
     name: "IA",
     description: "Modelos, visión y agentes que operan procesos.",
     technologies: [
@@ -132,7 +144,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Stripe", "Supabase", "Tailwind", "TypeScript"],
     visual: "commerce",
     demoUrl: "https://white-kicks.netlify.app",
-    githubUrl: siteConfig.github,
+    githubUrl: "https://github.com/Eduardoesqsal/E_COMMERCE_SHOES",
     featured: true,
   },
   {
@@ -145,7 +157,7 @@ export const projects: Project[] = [
     technologies: ["Python", "YOLO", "FastAPI", "React.js", "PostgreSQL"],
     visual: "face",
     demoUrl: "https://face-biometric-a-i-1.onrender.com/",
-    githubUrl: siteConfig.github,
+    githubUrl: "https://github.com/Eduardoesqsal/face_biometric_A-I",
     featured: true,
   },
   {
@@ -171,7 +183,20 @@ export const projects: Project[] = [
     technologies: ["Python", "LLMs", "AutoCAD API", "FastAPI", "Agents"],
     visual: "cad",
     demoUrl: "#contacto",
-    githubUrl: siteConfig.github,
+    githubUrl: "https://github.com/Eduardoesqsal/Agent_Autocad",
+  },
+  {
+    name: "Spatial Fence",
+    category: "App móvil de geocercas",
+    description:
+      "App móvil Android para crear y monitorear geocercas en tiempo real, con backend propio en FastAPI y Supabase para ubicación, usuarios y eventos.",
+    problem:
+      "Permite definir zonas sensibles y recibir alertas cuando un dispositivo entra o sale de ellas, sin depender de infraestructura propia compleja.",
+    technologies: ["Kotlin", "Android Studio", "Supabase", "FastAPI", "PostGIS"],
+    visual: "fence",
+    demoUrl: "https://snazzy-swan-469a01.netlify.app/",
+    githubUrl: "https://github.com/Eduardoesqsal/Spatial_fence",
+    featured: true,
   },
   {
     name: "PhotoFlow Portal",
@@ -195,6 +220,14 @@ export const experiences: Experience[] = [
     description:
       "Diseño y desarrollo de productos web, agentes inteligentes y sistemas de visión por computadora para operaciones reales.",
     highlights: ["Arquitectura de producto", "APIs e integraciones", "Modelos de IA"],
+  },
+  {
+    period: "2024 — Actual",
+    role: "Android & Mobile Developer",
+    company: "Proyectos propios de producto",
+    description:
+      "Desarrollo de aplicaciones Android nativas en Kotlin con Android Studio: geocercas y seguimiento por ubicación, integradas con un backend en FastAPI y Supabase.",
+    highlights: ["Kotlin", "Android Studio", "Supabase", "FastAPI"],
   },
   {
     period: "2022 — 2024",
@@ -300,6 +333,12 @@ export const developmentTypes: DevelopmentType[] = [
     description:
       "Integro mapas y análisis espacial dentro del producto para dar contexto territorial a las decisiones.",
     technologies: ["PostGIS", "Leaflet", "OpenLayers", "QGIS", "IDE"],
+  },
+  {
+    title: "Desarrollo de software móil Android",
+    description:
+      "Construyo apps móiles nativas en Kotlin con Android Studio, desde la interfaz hasta el GPS en tiempo real, conectadas con Supabase y FastAPI.",
+    technologies: ["Kotlin", "Android Studio", "Jetpack Compose", "MVVM", "Room", "Google Maps", "Supabase", "FastAPI"],
   },
   {
     title: "De páginas estáticas a aplicaciones web",

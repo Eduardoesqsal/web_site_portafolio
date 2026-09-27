@@ -5,6 +5,7 @@ import {
   MapPin,
   PackageCheck,
   ShoppingBag,
+  Smartphone,
   Sprout,
   Workflow,
 } from "lucide-react";
@@ -39,6 +40,7 @@ export function ProjectVisual({ type }: ProjectVisualProps) {
         {type === "agro" ? <AgroMockup /> : null}
         {type === "data" ? <DataMockup /> : null}
         {type === "photogrammetry" ? <PhotogrammetryMockup /> : null}
+        {type === "fence" ? <SpatialFenceMockup /> : null}
       </div>
     </div>
   );
@@ -229,6 +231,36 @@ function DataMockup() {
       <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between rounded-md bg-white/[.035] px-2 py-1.5">
         <span className="text-[6px] text-white/35">18.4M records processed</span>
         <span className="text-[6px] font-medium text-[#18d38a]">100%</span>
+      </div>
+    </div>
+  );
+}
+
+function SpatialFenceMockup() {
+  return (
+    <div className="relative h-full overflow-hidden bg-[#0c1412]">
+      <Image
+        src="/Spatial-fence.jpeg"
+        alt="App móvil Android Spatial Fence para monitoreo de geocercas"
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover object-center transition duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
+      <div className="absolute left-3 top-3 flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-2.5 py-1.5 font-mono text-[7px] uppercase tracking-[.14em] text-white backdrop-blur-md sm:left-4 sm:top-4">
+        <span className="size-1.5 rounded-full bg-[#a3e635] shadow-[0_0_10px_#a3e635]" /> Spatial Fence
+      </div>
+      <div className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-2.5 py-1.5 font-mono text-[7px] uppercase tracking-[.14em] text-white backdrop-blur-md sm:right-4 sm:top-4">
+        <Smartphone className="size-2.5 text-[#a3e635]" /> Android
+      </div>
+      <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between sm:bottom-4 sm:left-4 sm:right-4">
+        <div>
+          <p className="text-[7px] uppercase tracking-widest text-white/60">Geocercas · Kotlin + Supabase</p>
+          <p className="mt-1 text-xs font-semibold text-white">Alertas cuando un punto cruza la zona.</p>
+        </div>
+        <div className="rounded-full border border-[#a3e635]/35 bg-[#a3e635]/15 px-2 py-1 font-mono text-[7px] text-[#d9f99d] backdrop-blur-md">
+          ACTIVA
+        </div>
       </div>
     </div>
   );

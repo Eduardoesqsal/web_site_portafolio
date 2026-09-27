@@ -16,7 +16,15 @@ export type TechCategory = {
   technologies: Technology[];
 };
 
-export type ProjectVisual = "map" | "face" | "cad" | "commerce" | "agro" | "data" | "photogrammetry";
+export type ProjectVisual =
+  | "map"
+  | "face"
+  | "cad"
+  | "commerce"
+  | "agro"
+  | "data"
+  | "photogrammetry"
+  | "fence";
 
 export type Project = {
   name: string;

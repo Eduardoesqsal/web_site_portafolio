@@ -605,3 +605,14 @@ watsapp 4272989094
 y github es https://github.com/Eduardoesqsal
 
 https://web-site-portafolio-six.vercel.app/
+
+
+## enlaces proyectos github en source 
+https://github.com/Eduardoesqsal/Agent_Autocad.git ese es el proyecto del agente de autocad 
+https://github.com/Eduardoesqsal/face_biometric_A-I.git este es el de la app biometrica 
+https://github.com/Eduardoesqsal/E_COMMERCE_SHOES.git  este es el de el ecommerce 
+https://github.com/Eduardoesqsal/Spatial_fence.git ese es de spatial fence 
+
+
+
+https://snazzy-swan-469a01.netlify.app/ deploy web spatial-fence
